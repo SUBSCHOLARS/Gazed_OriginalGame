@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject playerModel;
     float MovingSpeed = 25f;
-    float RotateSpeed = 15f;
+    /*float RotateSpeed = 15f;
     float x;
-    float y;
+    float y;*/
     Rigidbody playerRB;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,14 @@ public class PlayerController : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             playerModel.transform.rotation = Quaternion.LookRotation(moveDirection);
+        }
+        if(Input.GetMouseButton(0))
+        {
+            playerModel.transform.position += Vector3.down;
+        }
+        else if(Input.GetMouseButtonDown(0))
+        {
+            playerModel.transform.position += Vector3.up;
         }
     }
 }
