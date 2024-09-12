@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject playerModel;
     float MovingSpeed = 25f;
+    float VerticalMovingSpeed = 15f;
     /*float RotateSpeed = 15f;
     float x;
     float y;*/
@@ -33,11 +34,11 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetMouseButton(0))
         {
-            playerModel.transform.position += Vector3.down;
+            playerModel.transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
         }
-        else if(Input.GetMouseButtonDown(0))
+        else if(Input.GetMouseButton(1))
         {
-            playerModel.transform.position += Vector3.up;
+            playerModel.transform.position += Vector3.up * VerticalMovingSpeed * Time.deltaTime;
         }
     }
 }

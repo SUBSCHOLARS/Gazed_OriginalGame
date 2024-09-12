@@ -41,7 +41,7 @@ public class EnemyGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
         GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length - 1)];
         timer += Time.deltaTime;
-        if(timer > 4.5f)
+        if(timer > 5f)
         {
             timer = 0;
             GameObject spawnCat = Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
