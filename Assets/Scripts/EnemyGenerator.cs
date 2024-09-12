@@ -38,29 +38,30 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        int randomIndex = Random.Range(0, VectorArray.Length - 1);
+        GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length - 1)];
         timer += Time.deltaTime;
         if(timer > 2.0f)
         {
             timer = 0;
-            Instantiate(catPrefabs[Random.Range(0, catPrefabs.Length - 1)], VectorArray[Random.Range(0, VectorArray.Length -1)], transform.rotation);
-            if(VectorArray[Random.Range(0, VectorArray.Length - 1)] == VectorArray[0])
+            Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
+            if(randomIndex == 0)
             {
                 return;
             }
-            else if(VectorArray[Random.Range(0, VectorArray.Length - 1)] == VectorArray[1])
+            else if(randomIndex == 1)
             {
                 catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, 180, 0);
             }
-            else if(VectorArray[Random.Range(0, VectorArray.Length - 1)] == VectorArray[2])
+            else if(randomIndex == 2)
             {
                 catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, -90, 0);
             }
-            else if(VectorArray[Random.Range(0, VectorArray.Length - 1)] == VectorArray[3])
+            else if(randomIndex == 3)
             {
-                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, 90, 0);
+                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, 180, 0);
             }
-            else if(VectorArray[Random.Range(0, VectorArray.Length - 1)] == VectorArray[4])
+            else if(randomIndex == 4)
             {
                 catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(90, 0, 0);
             }
