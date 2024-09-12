@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1091
+  m_VersionIndex: 1097
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1564,6 +1564,7 @@ GameObject:
   - component: {fileID: 6174713196665049440}
   - component: {fileID: 6224638820975891816}
   - component: {fileID: 7014919818610455858}
+  - component: {fileID: 5702635161114441878}
   m_Layer: 0
   m_Name: Hand2
   m_TagString: Untagged
@@ -1681,6 +1682,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5702635161114441878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354125481928143501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4746394c51e634aabefdea9d2314ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5249300310486170164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2185,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1091
+  m_VersionIndex: 1097
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2408,7 +2421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7297312063425698668}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 229.9, y: -8.5098, z: 46.4}
   m_LocalScale: {x: 1.5875, y: 1.5875, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2424,7 +2437,7 @@ Transform:
   - {fileID: 9148494646094199334}
   - {fileID: 1561563882915961077}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &7832448858675106204
 GameObject:
   m_ObjectHideFlags: 0

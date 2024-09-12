@@ -14,11 +14,11 @@ public class EnemyGenerator : MonoBehaviour
         {
             if(i == 0)
             {
-                VectorArray[i] = new Vector3(Random.Range(-60, 60), Random.Range(-10, 10), 75); 
+                VectorArray[i] = new Vector3(Random.Range(-100, 40), Random.Range(-10, 10), 90); 
             }
             else if(i == 1)
             {
-                VectorArray[i] = new Vector3(Random.Range(-60, 60), Random.Range(-10, 10), -75);
+                VectorArray[i] = new Vector3(Random.Range(-100, 40), Random.Range(-10, 10), -90);
             }
             else if(i == 2)
             {
@@ -41,29 +41,29 @@ public class EnemyGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
         GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length - 1)];
         timer += Time.deltaTime;
-        if(timer > 2.0f)
+        if(timer > 4.5f)
         {
             timer = 0;
-            Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
+            GameObject spawnCat = Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
             if(randomIndex == 0)
             {
                 return;
             }
             else if(randomIndex == 1)
             {
-                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, 180, 0);
+                spawnCat.transform.Rotate(0, 180, 0);
             }
             else if(randomIndex == 2)
             {
-                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, -90, 0);
+                spawnCat.transform.Rotate(0, 90, 0);
             }
             else if(randomIndex == 3)
             {
-                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(0, 180, 0);
+                spawnCat.transform.Rotate(0, 180, 0);
             }
             else if(randomIndex == 4)
             {
-                catPrefabs[Random.Range(0, catPrefabs.Length - 1)].transform.Rotate(90, 0, 0);
+                spawnCat.transform.Rotate(90, 0, 0);
             }
         }
     }
