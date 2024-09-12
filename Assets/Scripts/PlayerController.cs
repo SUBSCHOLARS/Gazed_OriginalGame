@@ -41,4 +41,12 @@ public class PlayerController : MonoBehaviour
             playerModel.transform.position += Vector3.up * VerticalMovingSpeed * Time.deltaTime;
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Cat"))
+        {
+            playerRB.AddForce(Vector3.up, ForceMode.Impulse);
+        }
+    }
 }
