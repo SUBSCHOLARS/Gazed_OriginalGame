@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     float MovingSpeed = 20f;
     float VerticalMovingSpeed = 15f;
+    float PotentialScoreTimer = 0;
     //float Force = 10f;
     /*float RotateSpeed = 15f;
     float x;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PotentialScoreTimer += Time.deltaTime;
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += new Vector3(0, 0, 1) * MovingSpeed * Time.deltaTime;
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Cat"))
         {
             SceneManager.LoadScene("GameOver");
+            float GottenScore = PotentialScoreTimer;
             /*Vector3 CollisionDirection = collision.contacts[0].normal;
             playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);*/
         }
