@@ -17,7 +17,7 @@ public class PlayerCameraController : MonoBehaviour
     {
         // カーソルを非表示にし、ゲームウィンドウ内にロック
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     void Update()
@@ -28,6 +28,7 @@ public class PlayerCameraController : MonoBehaviour
 
         // ピッチの値を上下の制限内にクランプ（これにより、カメラが上下回転しすぎないようにする）
         pitch = Mathf.Clamp(pitch, -verticalRotationLimit, verticalRotationLimit);
+        player.rotation = Quaternion.Euler(0, yaw, 0);
 
         // カメラの位置をプレイヤーの背後に設定
         Vector3 targetPosition = player.position + offset;

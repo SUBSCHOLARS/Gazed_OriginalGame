@@ -5,10 +5,10 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject playerModel;
-    float MovingSpeed = 25f;
+    float MovingSpeed = 20f;
     float VerticalMovingSpeed = 15f;
+    float Force = 10f;
     /*float RotateSpeed = 15f;
     float x;
     float y;*/
@@ -22,16 +22,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 cameraForward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 cameraRight = Vector3.Scale(mainCamera.transform.right, new Vector3(1, 0, 1)).normalized;
-        Vector3 moveDirection = (cameraForward * verticalInput + cameraRight * horizontalInput).normalized;
-        transform.position += moveDirection * Time.deltaTime * MovingSpeed;
-        if (moveDirection != Vector3.zero)
-        {
-            playerModel.transform.rotation = Quaternion.LookRotation(moveDirection);
-        }
+        float horizontalMove = Input.GetAxis("Horizontal");
+        float verticalMove = Input.GetAxis("Vertical");
+
+        this.gameObject.transform.position += new Vector3(horizontalMove * MovingSpeed * Time.deltaTime, 0, verticalMove * MovingSpeed * Time.deltaTime);
+
         if(Input.GetMouseButton(0))
         {
             playerModel.transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
@@ -46,7 +41,8 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Cat"))
         {
-            playerRB.AddForce(Vector3.up, ForceMode.Impulse);
+            Vector3 CollisionDirection = collision.contacts[0].normal;
+            playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);
         }
     }
 }
