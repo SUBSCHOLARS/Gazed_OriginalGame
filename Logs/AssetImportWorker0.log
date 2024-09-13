@@ -6256,3 +6256,19 @@ Received Import Request.
 Start importing Assets/Prefabs/CatLongeningArmRight.prefab using Guid(977ed5cc5fab4874da637f86d8867e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d862874378acf4a84db773cde6b8f4') in 0.060310 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 114
+========================================================================
+Received Import Request.
+  Time since last request: 32585.299167 seconds.
+  path: Assets/Animations/CatSweepingAnimVerticallyRight.anim
+  artifactKey: Guid(b2719e8b76eb04b4eabac337eb7329a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/CatSweepingAnimVerticallyRight.anim using Guid(b2719e8b76eb04b4eabac337eb7329a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0fedf1a1d1c056fabac96033ba2c94') in 0.458856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 179.448645 seconds.
+  path: Assets/Animations/CatSweepingAnimVerticallyAnimation.anim
+  artifactKey: Guid(0e0e6472e55732d459f5193a6fa23716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/CatSweepingAnimVerticallyAnimation.anim using Guid(0e0e6472e55732d459f5193a6fa23716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '739b72154a53a3582c1c4b8f14d64d01') in 0.118969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1

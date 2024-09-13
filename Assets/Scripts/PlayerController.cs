@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameObject playerModel;
     float MovingSpeed = 20f;
     float VerticalMovingSpeed = 15f;
-    float Force = 10f;
+    //float Force = 10f;
     /*float RotateSpeed = 15f;
     float x;
     float y;*/
@@ -22,18 +22,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalMove = Input.GetAxis("Horizontal");
-        float verticalMove = Input.GetAxis("Vertical");
-
-        this.gameObject.transform.position += new Vector3(horizontalMove * MovingSpeed * Time.deltaTime, 0, verticalMove * MovingSpeed * Time.deltaTime);
-
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += new Vector3(0, 0, 1) * MovingSpeed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += new Vector3(0, 0, -1) * MovingSpeed * Time.deltaTime;
+        }
+        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += new Vector3(-1, 0, 0) * MovingSpeed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += new Vector3(1, 0, 0) * MovingSpeed * Time.deltaTime;
+        }
         if(Input.GetMouseButton(0))
         {
-            playerModel.transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
+            transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
         }
         else if(Input.GetMouseButton(1))
         {
-            playerModel.transform.position += Vector3.up * VerticalMovingSpeed * Time.deltaTime;
+            transform.position += Vector3.up * VerticalMovingSpeed * Time.deltaTime;
         }
     }
 
@@ -41,8 +52,9 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Cat"))
         {
-            Vector3 CollisionDirection = collision.contacts[0].normal;
-            playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);
+            SceneManager.LoadScene("GameOver");
+            /*Vector3 CollisionDirection = collision.contacts[0].normal;
+            playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);*/
         }
     }
 }

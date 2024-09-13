@@ -14,23 +14,23 @@ public class EnemyGenerator : MonoBehaviour
         {
             if(i == 0)
             {
-                VectorArray[i] = new Vector3(Random.Range(-100, 40), Random.Range(-10, 10), 90); 
+                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-10, 15), 90); 
             }
             else if(i == 1)
             {
-                VectorArray[i] = new Vector3(Random.Range(-100, 40), Random.Range(-10, 10), -90);
+                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-10, 10), -90);
             }
             else if(i == 2)
             {
-                VectorArray[i] = new Vector3(-75, Random.Range(-10, 10), Random.Range(-60, 60));
+                VectorArray[i] = new Vector3(-75, Random.Range(-10, 10), Random.Range(-40, 40));
             }
             else if(i == 3)
             {
-                VectorArray[i] = new Vector3(75, Random.Range(-10, 10), Random.Range(-60, 60));
+                VectorArray[i] = new Vector3(75, Random.Range(-10, 10), Random.Range(-40, 40));
             }
             else if(i == 4)
             {
-                VectorArray[i] = new Vector3(Random.Range(-50, 50), 30, Random.Range(-50,50));
+                VectorArray[i] = new Vector3(Random.Range(-40, 40), 30, Random.Range(-40,40));
             }
         }
     }
@@ -41,7 +41,7 @@ public class EnemyGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
         GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length - 1)];
         timer += Time.deltaTime;
-        if(timer > 5f)
+        if(timer > 2.0f)
         {
             timer = 0;
             GameObject spawnCat = Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
@@ -55,11 +55,11 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(randomIndex == 2)
             {
-                spawnCat.transform.Rotate(0, 90, 0);
+                spawnCat.transform.Rotate(0, -90, 0);
             }
             else if(randomIndex == 3)
             {
-                spawnCat.transform.Rotate(0, 180, 0);
+                spawnCat.transform.Rotate(0, 90, 0);
             }
             else if(randomIndex == 4)
             {
