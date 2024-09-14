@@ -6,10 +6,10 @@ public class PlayerCameraController : MonoBehaviour
 {
     public Transform player; // プレイヤーのTransformをアサインする
     public Vector3 offset = new Vector3(0, 5, -10); // カメラとプレイヤーの距離（背後に配置するためのオフセット）
-    public float sensitivity = 5.0f; // マウス感度
+    public float sensitivity = 3.0f; // マウス感度
     public float smoothSpeed = 0.125f;
     //public float distanceFromPlayer = 10f; // プレイヤーとの距離
-    public float verticalRotationLimit = 80f; // 上下視点の回転制限
+    public float verticalRotationLimit = 60f; // 上下視点の回転制限
 
     private float pitch = 0f; // 上下回転（ピッチ）
     private float yaw = 0f;   // 左右回転（ヨー）

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     float MovingSpeed = 20f;
     float VerticalMovingSpeed = 15f;
+    float NormalVertical = 5f;
     //float Force = 10f;
     /*float RotateSpeed = 15f;
     float x;
@@ -22,57 +23,33 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Vector3 forward = transform.forward;  // プレイヤーの前方向
-        Vector3 right = transform.right;      // プレイヤーの右方向
-
+        transform.position += Vector3.up * NormalVertical * Time.deltaTime;
         Vector3 moveDirection = Vector3.zero; // 移動ベクトルを初期化
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            moveDirection += right;
+            moveDirection += transform.forward;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            moveDirection -= right;
+            moveDirection -= transform.forward;
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            moveDirection -= forward;
+            moveDirection -= transform.right;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            moveDirection += forward;
+            moveDirection += transform.right;
         }
 
         // 正規化して、移動速度を調整
-        moveDirection = moveDirection.normalized * MovingSpeed * Time.deltaTime;
-        transform.position += moveDirection;
+        //moveDirection = moveDirection.normalized * MovingSpeed * Time.deltaTime;
+        transform.Translate(moveDirection.normalized * MovingSpeed * Time.deltaTime);
 
-
-        /*if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.position += new Vector3(1, 0, 0) * MovingSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.position += new Vector3(-1, 0, 0) * MovingSpeed * Time.deltaTime;
-        }
-        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += new Vector3(0, 0, 1) * MovingSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += new Vector3(0, 0, -1) * MovingSpeed * Time.deltaTime;
-        }*/
         if(Input.GetMouseButton(0))
         {
             transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
-        }
-        else if(Input.GetMouseButton(1))
-        {
-            transform.position += Vector3.up * VerticalMovingSpeed * Time.deltaTime;
         }
     }
 

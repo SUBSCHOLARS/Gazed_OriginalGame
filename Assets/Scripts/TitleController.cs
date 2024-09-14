@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TitleController : MonoBehaviour
 {
     public Text LongestSurvivedTimeMinute;
-    public Text LongestSurivedTime;
+    public Text LongestSurvivedTime;
     public Text AccumulatedScore;
     float accumulatedScores = 0;
     // Start is called before the first frame update
@@ -20,8 +20,15 @@ public class TitleController : MonoBehaviour
     {
         float highScore = PlayerPrefs.GetFloat("HighScore", 0f);
 
-        LongestSurvivedTimeMinute.text = (highScore / 60).ToString("00.0");
-        LongestSurivedTime.text = (highScore % 60).ToString("00");
+        if(highScore < 60)
+        {
+            LongestSurvivedTime.text = highScore.ToString("00.0");
+        }
+        else if(highScore >= 60)
+        {
+            LongestSurvivedTime.text = (highScore / 60).ToString("00.0");
+            LongestSurvivedTimeMinute.text = (highScore % 60).ToString("00");
+        }
 
         float accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         accumulatedScores *= accumulatedScore;

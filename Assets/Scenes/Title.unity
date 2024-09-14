@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LongestSurvivedTimeMinute: {fileID: 1731532775}
-  LongestSurivedTime: {fileID: 1903851088}
+  LongestSurvivedTime: {fileID: 1903851088}
   AccumulatedScore: {fileID: 1071603905}
 --- !u!4 &2062565440
 Transform:
