@@ -11,7 +11,7 @@ public class TitleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class TitleController : MonoBehaviour
             LongestSurvivedTimeMinute.text = (GameOverController.SurvivedHighScore / 60).ToString("00");
             LongestSurivedTime.text = (GameOverController.SurvivedHighScore % 60).ToString("00.0");
         }
-        AccumulatedScore.text = GameOverController.AccumulatedScore.ToString("000");
+        AccumulatedScore.text = GameOverController.AccumulatedScore.ToString("0000");
+        AccumulatedScore.text = SurvivalTimeController.ScorePotentialTimer.ToString("0000");
     }
 }

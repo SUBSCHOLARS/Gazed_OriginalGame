@@ -30,6 +30,8 @@ public class PlayerCameraController : MonoBehaviour
         // ピッチの値を上下の制限内にクランプ（これにより、カメラが上下回転しすぎないようにする）
         pitch = Mathf.Clamp(pitch, -verticalRotationLimit, verticalRotationLimit);
 
+        player.rotation = Quaternion.Euler(0, yaw, 0);
+
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 desiredPosition =player.position + rotation * offset;
 

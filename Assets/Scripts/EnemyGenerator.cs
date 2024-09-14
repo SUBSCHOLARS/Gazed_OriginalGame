@@ -14,19 +14,19 @@ public class EnemyGenerator : MonoBehaviour
         {
             if(i == 0)
             {
-                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-10, 15), 90); 
+                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-15, 15), 80); 
             }
             else if(i == 1)
             {
-                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-10, 10), -90);
+                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-15, 15), -80);
             }
             else if(i == 2)
             {
-                VectorArray[i] = new Vector3(-75, Random.Range(-10, 10), Random.Range(-40, 40));
+                VectorArray[i] = new Vector3(-70, Random.Range(-15, 15), Random.Range(-40, 40));
             }
             else if(i == 3)
             {
-                VectorArray[i] = new Vector3(75, Random.Range(-10, 10), Random.Range(-40, 40));
+                VectorArray[i] = new Vector3(70, Random.Range(-15, 15), Random.Range(-40, 40));
             }
             else if(i == 4)
             {

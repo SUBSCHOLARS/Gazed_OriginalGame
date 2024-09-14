@@ -22,22 +22,50 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+
+        Vector3 forward = transform.forward;  // プレイヤーの前方向
+        Vector3 right = transform.right;      // プレイヤーの右方向
+
+        Vector3 moveDirection = Vector3.zero; // 移動ベクトルを初期化
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += new Vector3(0, 0, 1) * MovingSpeed * Time.deltaTime;
+            moveDirection += right;
         }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position += new Vector3(0, 0, -1) * MovingSpeed * Time.deltaTime;
+            moveDirection -= right;
         }
-        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-1, 0, 0) * MovingSpeed * Time.deltaTime;
+            moveDirection -= forward;
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            moveDirection += forward;
+        }
+
+        // 正規化して、移動速度を調整
+        moveDirection = moveDirection.normalized * MovingSpeed * Time.deltaTime;
+        transform.position += moveDirection;
+
+
+        /*if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += new Vector3(1, 0, 0) * MovingSpeed * Time.deltaTime;
         }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += new Vector3(-1, 0, 0) * MovingSpeed * Time.deltaTime;
+        }
+        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += new Vector3(0, 0, 1) * MovingSpeed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += new Vector3(0, 0, -1) * MovingSpeed * Time.deltaTime;
+        }*/
         if(Input.GetMouseButton(0))
         {
             transform.position += Vector3.down * VerticalMovingSpeed * Time.deltaTime;
@@ -53,9 +81,10 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Cat"))
         {
             SceneManager.LoadScene("GameOver");
-            PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
+            /*PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
             PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
+            SurvivalTimeController.timer = 0;*/
             /*Vector3 CollisionDirection = collision.contacts[0].normal;
             playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);*/
         }
