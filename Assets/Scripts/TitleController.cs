@@ -9,6 +9,7 @@ public class TitleController : MonoBehaviour
     public Text LongestSurvivedTime;
     public Text AccumulatedScore;
     float accumulatedScores = 0;
+    private float survivedScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,12 @@ public class TitleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float highScore = PlayerPrefs.GetFloat("HighScore", 0f);
+        survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        float highScore = PlayerPrefs.GetFloat("HighScore", survivedScore);
+        if(survivedScore > highScore)
+        {
+            PlayerPrefs.SetFloat("HighScore", survivedScore);
+        }
 
         if(highScore < 60)
         {
