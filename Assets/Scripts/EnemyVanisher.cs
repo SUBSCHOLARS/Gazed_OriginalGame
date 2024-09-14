@@ -17,7 +17,7 @@ public class EnemyVanisher : MonoBehaviour
         if(catAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f /*&& catAnimator.IsInTransition(0)*/)
         {
             Destroy(transform.parent.gameObject);
-            Debug.Log("Destroy object");
+            //Debug.Log("Destroy object");
         }
     }
 }

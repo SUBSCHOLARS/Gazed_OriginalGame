@@ -19,7 +19,7 @@ public class EnemyVanisherForPreparation : MonoBehaviour
         if(timer >= 2.0f)
         {
             Destroy(gameObject);
-            Debug.Log("Destroy static object");
+            //Debug.Log("Destroy static object");
         }
     }
 }
