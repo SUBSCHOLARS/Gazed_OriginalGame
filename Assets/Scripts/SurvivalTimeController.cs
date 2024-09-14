@@ -7,7 +7,7 @@ public class SurvivalTimeController : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
     public static float timer = 0;
-    public static float SocrePotentialTimer = 0;
+    public static float ScorePotentialTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class SurvivalTimeController : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        SocrePotentialTimer += Time.deltaTime;
+        ScorePotentialTimer += Time.deltaTime;
         SurvivalTimeSecond.text = timer.ToString("00.0");
     }
 }

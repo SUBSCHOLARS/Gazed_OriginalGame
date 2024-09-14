@@ -7,7 +7,7 @@ public class SurvivalTimeMinuteDetector : MonoBehaviour
 {
     public Text SurvivalTimeMinute;
     private float MinuteTimer = 0;
-    private int MinuteDetector = 0;
+    public static int MinuteDetector = 0;
     // Start is called before the first frame update
     void Start()
     {
