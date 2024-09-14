@@ -8,6 +8,7 @@ public class TitleController : MonoBehaviour
     public Text LongestSurvivedTimeMinute;
     public Text LongestSurivedTime;
     public Text AccumulatedScore;
+    float accumulatedScores = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +18,13 @@ public class TitleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameOverController.SurvivedTime > GameOverController.SurvivedHighScore)
-        {
-            GameOverController.SurvivedHighScore = GameOverController.SurvivedTime;
-            LongestSurvivedTimeMinute.text = (GameOverController.SurvivedHighScore / 60).ToString("00");
-            LongestSurivedTime.text = (GameOverController.SurvivedHighScore % 60).ToString("00.0");
-        }
-        else
-        {
-            LongestSurvivedTimeMinute.text = (GameOverController.SurvivedHighScore / 60).ToString("00");
-            LongestSurivedTime.text = (GameOverController.SurvivedHighScore % 60).ToString("00.0");
-        }
-        AccumulatedScore.text = GameOverController.AccumulatedScore.ToString("0000");
-        AccumulatedScore.text = SurvivalTimeController.ScorePotentialTimer.ToString("0000");
+        float highScore = PlayerPrefs.GetFloat("HighScore", 0f);
+
+        LongestSurvivedTimeMinute.text = (highScore / 60).ToString("00.0");
+        LongestSurivedTime.text = (highScore % 60).ToString("00");
+
+        float accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        accumulatedScores *= accumulatedScore;
+        AccumulatedScore.text = accumulatedScore.ToString("0000");
     }
 }
