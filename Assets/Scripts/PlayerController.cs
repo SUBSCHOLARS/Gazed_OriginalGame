@@ -53,7 +53,9 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Cat"))
         {
             SceneManager.LoadScene("GameOver");
-            PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.ScorePotentialTimer);
+            PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
+            PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
+            PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             /*Vector3 CollisionDirection = collision.contacts[0].normal;
             playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);*/
         }
