@@ -29,15 +29,10 @@ public class GameOverController : MonoBehaviour
         survivedTime = PlayerPrefs.GetFloat("SurvivedTime", 0f);
         survivedTimeMinute = PlayerPrefs.GetInt("SurvivedTimeMinute", 0);
 
-        SurvivedTimeText.text = survivedTime.ToString("00.0");
-        SurivivedTimeTextMinute.text = survivedTimeMinute.ToString("00");
-        SurvivedTimeScore.text = survivedScore.ToString("0000");
+        SurvivedTimeText.text = SurvivalTimeController.timer.ToString("00.0");
+        SurivivedTimeTextMinute.text = SurvivalTimeMinuteDetector.MinuteDetector.ToString("00");
+        SurvivedTimeScore.text = SurvivalTimeController.ScorePotentialTimer.ToString("0000");
 
-        float highScore = PlayerPrefs.GetFloat("HighScore", survivedScore);
-        if(survivedScore > highScore)
-        {
-            PlayerPrefs.SetFloat("HighScore", survivedScore);
-        }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
