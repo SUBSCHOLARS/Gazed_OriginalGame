@@ -28,23 +28,21 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            moveDirection += transform.forward;
+            moveDirection -= transform.forward;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            moveDirection -= transform.forward;
+            moveDirection += transform.forward;
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            moveDirection -= transform.right;
+            moveDirection += transform.right;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            moveDirection += transform.right;
+            moveDirection -= transform.right;
         }
 
-        // 正規化して、移動速度を調整
-        //moveDirection = moveDirection.normalized * MovingSpeed * Time.deltaTime;
         transform.Translate(moveDirection.normalized * MovingSpeed * Time.deltaTime);
 
         if(Input.GetMouseButton(0))
@@ -62,8 +60,6 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
             PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             SurvivalTimeController.timer = 0;
-            /*Vector3 CollisionDirection = collision.contacts[0].normal;
-            playerRB.AddForce(-CollisionDirection * Force, ForceMode.Impulse);*/
         }
     }
 }

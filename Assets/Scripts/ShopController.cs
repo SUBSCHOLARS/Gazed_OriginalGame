@@ -20,7 +20,7 @@ public class ShopController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnBuyButtonClicked()
@@ -36,6 +36,7 @@ public class ShopController : MonoBehaviour
 
     void OnResurviveButtonClicked()
     {
+        MainSceneController.CountSeaweed++;
         SceneManager.LoadScene("Main");
     }
 }

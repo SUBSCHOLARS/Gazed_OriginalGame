@@ -23,7 +23,7 @@ public class CatDelayer : MonoBehaviour
 
             if(catAnimator != null)
             {
-                catAnimator.speed = 0.5f;
+                catAnimator.speed = 0.125f;
             }
         }
     }

@@ -8,11 +8,6 @@ public class GameOverController : MonoBehaviour
     public Text SurvivedTimeScore;
     public Text SurivivedTimeTextMinute;
     public Text SurvivedTimeText;
-    /*public static float SurvivedHighScore;
-    public static float SurvivedTime;
-    public static int SurvivedTimeMinute;
-    public static float SurvivedScore;
-    public static float AccumulatedScore = 0;*/
 
     private float survivedScore;
     private float survivedTime;
@@ -20,11 +15,6 @@ public class GameOverController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*SurvivedHighScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        SurvivedTime = PlayerPrefs.GetFloat("SurvivedTime", 0f);
-        SurvivedTimeMinute  = PlayerPrefs.GetInt("SurvivedTimeMinute", 0);
-        SurvivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);*/
-        //Time.timeScale = 0;
         survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         survivedTime = PlayerPrefs.GetFloat("SurvivedTime", 0f);
         survivedTimeMinute = PlayerPrefs.GetInt("SurvivedTimeMinute", 0);

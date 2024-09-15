@@ -14,10 +14,9 @@ public class EnemyVanisher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(catAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f /*&& catAnimator.IsInTransition(0)*/)
+        if(catAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
             Destroy(transform.parent.gameObject);
-            //Debug.Log("Destroy object");
         }
     }
 }
