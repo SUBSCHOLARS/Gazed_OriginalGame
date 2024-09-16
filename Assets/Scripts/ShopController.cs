@@ -9,6 +9,11 @@ public class ShopController : MonoBehaviour
     public Button BuyButton;
     public Button ResurviveButton;
     private Vector3 randomPosition;
+    public GameObject Text1;
+    public GameObject Text2;
+    public GameObject Text3;
+    public GameObject Text4;
+    public GameObject SeaweedForDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +36,21 @@ public class ShopController : MonoBehaviour
         PlayerPrefs.SetFloat("SeaweedY", randomPosition.y);
         PlayerPrefs.SetFloat("SeaweedZ", randomPosition.z);
 
+        SceneManager.LoadScene("Main", LoadSceneMode.Additive);
+        Time.timeScale = 0;
         ResurviveButton.gameObject.SetActive(true);
+        Text1.SetActive(false);
+        Text2.SetActive(false);
+        Text3.SetActive(false);
+        Text4.SetActive(false);
+        SeaweedForDisplay.SetActive(false);
+
     }
 
     void OnResurviveButtonClicked()
     {
         MainSceneController.CountSeaweed++;
         SceneManager.LoadScene("Main");
+        Time.timeScale = 1;
     }
 }

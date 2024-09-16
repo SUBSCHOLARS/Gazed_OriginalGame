@@ -233,6 +233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuyButton: {fileID: 154137386}
   ResurviveButton: {fileID: 324687893}
+  Text1: {fileID: 799211876}
+  Text2: {fileID: 1712259968}
+  Text3: {fileID: 116581593}
+  Text4: {fileID: 31804612}
+  SeaweedForDisplay: {fileID: 5896064623044767330}
 --- !u!4 &89455717
 Transform:
   m_ObjectHideFlags: 0
