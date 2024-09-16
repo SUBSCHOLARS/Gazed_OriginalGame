@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cat
+  - EnemyGenerator
+  - MainCanvas
+  - Water
+  - SubMainCamera
   layers:
   - Default
   - TransparentFX

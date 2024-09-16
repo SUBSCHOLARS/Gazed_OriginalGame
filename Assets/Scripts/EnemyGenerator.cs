@@ -84,7 +84,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(randomIndex == 4)
             {
-                spawnCat.transform.Rotate(90, 0, 0);
+                spawnCat.transform.Rotate(-90, 0, 0);
             }
             else if(randomIndex == 5)
             {

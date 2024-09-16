@@ -237,11 +237,14 @@ MonoBehaviour:
   ZoomInButton: {fileID: 770415328}
   ZoomOutButton: {fileID: 1934652438}
   EventSystem: {fileID: 1293380233}
+  Activator: {fileID: 0}
   Text1: {fileID: 799211876}
   Text2: {fileID: 1712259968}
   Text3: {fileID: 116581593}
   Text4: {fileID: 31804612}
   SeaweedForDisplay: {fileID: 5896064623044767330}
+  rayDistance: 100
+  SeaWeed: {fileID: 1491023077940411584, guid: 939d5a4438812c444bf60ebd8c8be036, type: 3}
 --- !u!4 &89455717
 Transform:
   m_ObjectHideFlags: 0
@@ -1208,7 +1211,7 @@ GameObject:
   - component: {fileID: 830508119}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: SubMainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1223,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830508118}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &830508120
 Camera:
   m_ObjectHideFlags: 0
