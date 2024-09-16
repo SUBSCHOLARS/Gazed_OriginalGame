@@ -5,32 +5,53 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject[] catPrefabs = new GameObject[6];
-    private Vector3[] VectorArray = new Vector3[5];
+    private Vector3[] VectorArray = new Vector3[10];
+    public GameObject funnycatPrefab;
     float timer =0;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < VectorArray.Length - 1; i++)
+        for (int i = 0; i < VectorArray.Length; i++)
         {
             if(i == 0)
             {
-                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-15, 15), 80); 
+                VectorArray[i] = new Vector3(Random.Range(-130, 130), Random.Range(-1, 20), 60.5f); 
             }
             else if(i == 1)
             {
-                VectorArray[i] = new Vector3(Random.Range(-40, 40), Random.Range(-15, 15), -80);
+                VectorArray[i] = new Vector3(Random.Range(-130, 130), Random.Range(-7, 20), -260.5f);
             }
             else if(i == 2)
             {
-                VectorArray[i] = new Vector3(-70, Random.Range(-15, 15), Random.Range(-40, 40));
+                VectorArray[i] = new Vector3(-160.5f, Random.Range(-1, 20), Random.Range(-230, 30));
             }
             else if(i == 3)
             {
-                VectorArray[i] = new Vector3(70, Random.Range(-15, 15), Random.Range(-40, 40));
+                VectorArray[i] = new Vector3(160.5f, Random.Range(-1, 20), Random.Range(-230, 30));
             }
             else if(i == 4)
             {
-                VectorArray[i] = new Vector3(Random.Range(-40, 40), 30, Random.Range(-40,40));
+                VectorArray[i] = new Vector3(Random.Range(-130, 130), 40, Random.Range(-230,30));
+            }
+            else if(i == 5)
+            {
+                VectorArray[i] = new Vector3(Random.Range(-30, 30), Random.Range(-1, 20), -60);
+            }
+            else if(i == 6)
+            {
+                VectorArray[i] = new Vector3(Random.Range(-30, 30), Random.Range(-1, 20), -130);
+            }
+            else if(i == 7)
+            {
+                VectorArray[i] = new Vector3(-30, Random.Range(-1, 20), Random.Range(-120, -60));
+            }
+            else if(i == 8)
+            {
+                VectorArray[i] = new Vector3(30, Random.Range(-1, 20), Random.Range(-120, -60));
+            }
+            else if(i == 9)
+            {
+                VectorArray[i] = new Vector3(0, 0, -100);
             }
         }
     }
@@ -64,6 +85,26 @@ public class EnemyGenerator : MonoBehaviour
             else if(randomIndex == 4)
             {
                 spawnCat.transform.Rotate(90, 0, 0);
+            }
+            else if(randomIndex == 5)
+            {
+                spawnCat.transform.Rotate(0, 180, 0);
+            }
+            else if(randomIndex == 6)
+            {
+                return;
+            }
+            else if(randomIndex == 7)
+            {
+                spawnCat.transform.Rotate(0, -90, 0);
+            }
+            else if(randomIndex == 8)
+            {
+                spawnCat.transform.Rotate(0, 90, 0);
+            }
+            else if(randomIndex == 9)
+            {
+                return;
             }
         }
     }
