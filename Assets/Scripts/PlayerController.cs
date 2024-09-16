@@ -7,12 +7,9 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     float MovingSpeed = 20f;
+    private float rotationAngle;
     float VerticalMovingSpeed = 15f;
     float NormalVertical = 5f;
-    //float Force = 10f;
-    /*float RotateSpeed = 15f;
-    float x;
-    float y;*/
     Rigidbody playerRB;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +21,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * NormalVertical * Time.deltaTime;
-        Vector3 moveDirection = Vector3.zero; // 移動ベクトルを初期化
+        rotationAngle = -transform.eulerAngles.y * Mathf.Deg2Rad;
+
+        float moveForward = Input.GetAxis("Horizontal") * MovingSpeed * Time.deltaTime;
+        float moveRight = Input.GetAxis("Vertical") * MovingSpeed * Time.deltaTime;
+
+        float newX = moveForward * Mathf.Cos(rotationAngle) - moveRight * Mathf.Sin(rotationAngle);
+        float newZ = moveForward * Mathf.Sin(rotationAngle) + moveRight * Mathf.Cos(rotationAngle);
+
+        this.transform.position += new Vector3(newX, 0, newZ);
+        /*Vector3 moveDirection = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
@@ -43,7 +49,7 @@ public class PlayerController : MonoBehaviour
             moveDirection -= transform.right;
         }
 
-        transform.Translate(moveDirection.normalized * MovingSpeed * Time.deltaTime);
+        transform.Translate(moveDirection.normalized * MovingSpeed * Time.deltaTime);*/
 
         if(Input.GetMouseButton(0))
         {

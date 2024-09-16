@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class MainSceneController : MonoBehaviour
 {
-    public GameObject Seaweed;
-    public static int CountSeaweed = 0;
+    public static GameObject Seaweed;
+    public static Camera MainMainCamera;
     // Start is called before the first frame update
     void Start()
     {
-        float seaweedX = PlayerPrefs.GetFloat("SeaweedX", 0);
+        /*float seaweedX = PlayerPrefs.GetFloat("SeaweedX", 0);
         float seaweedY = PlayerPrefs.GetFloat("SeaweedY", 0);
         float seaweedZ = PlayerPrefs.GetFloat("SeaweedZ", 0);
 
         Vector3 seaweedPosition = new Vector3(seaweedX, seaweedY, seaweedZ);
-        if(CountSeaweed <= 3 && CountSeaweed > 0)
+        if(ShopController.CountSeaweed <= 3 && ShopController.CountSeaweed > 0)
         {
             Instantiate(Seaweed, seaweedPosition, Quaternion.identity);
             DontDestroyOnLoad(Seaweed);
-        }
+        }*/
     }
 
     // Update is called once per frame
