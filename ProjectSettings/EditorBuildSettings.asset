@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleMain.unity
     guid: 221d0a1dbd285d749b9454c81c6651d0
+  - enabled: 1
+    path: Assets/Scenes/GameClear.unity
+    guid: 3d26196788cd2624097017d925aab92e
+  - enabled: 1
+    path: Assets/Scenes/Main300.unity
+    guid: 3572df070c93de8409cefd2d25f2c84f
+  - enabled: 1
+    path: Assets/Scenes/Main500.unity
+    guid: 8b85201fcc3f8a24cbc32b7bfc8a560d
+  - enabled: 1
+    path: Assets/Scenes/TitleAfterFirst.unity
+    guid: 69f5945e0cfe3ef41af231e276cba256
   m_configObjects: {}

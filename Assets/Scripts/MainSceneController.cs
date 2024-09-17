@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class MainSceneController : MonoBehaviour
 {
-    public GameObject Seaweed;
-    private SaveManager saveManager;
+    public static GameObject gameObjectOne;
+    public static GameObject gameObjectTwo;
+    public static GameObject gameObjectThree;
+    public static GameObject gameObjectFour;
+    public static GameObject gameObjectFive;
+    public static GameObject gameObjectSix;
+    public static GameObject gameObjectSeven;
+    public static GameObject gameObjectEight;
+    public static GameObject Seaweed;
     // Start is called before the first frame update
     void Start()
     {
-        saveManager = FindAnyObjectByType<SaveManager>();
-        List<Vector3> savedPositions = saveManager.GetSavedPositions();
-        foreach(Vector3 pos in savedPositions)
-        {
-            Instantiate(Seaweed, pos, Quaternion.identity);
-        }
+        gameObjectOne = GameObject.FindGameObjectWithTag("One");
+        gameObjectTwo = GameObject.FindGameObjectWithTag("Two");
+        gameObjectThree = GameObject.FindGameObjectWithTag("Three");
+        gameObjectFour = GameObject.FindGameObjectWithTag("Four");
+        gameObjectFive = GameObject.FindGameObjectWithTag("Five");
+        gameObjectSix = GameObject.FindGameObjectWithTag("Six");
+        gameObjectSeven = GameObject.FindGameObjectWithTag("Seven");
+        gameObjectEight = GameObject.FindGameObjectWithTag("Eight");
+
     }
 
     // Update is called once per frame

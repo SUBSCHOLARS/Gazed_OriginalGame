@@ -9,6 +9,14 @@ TagManager:
   - MainCanvas
   - Water
   - SubMainCamera
+  - One
+  - Two
+  - Three
+  - Four
+  - Five
+  - Six
+  - Seven
+  - Eight
   layers:
   - Default
   - TransparentFX
