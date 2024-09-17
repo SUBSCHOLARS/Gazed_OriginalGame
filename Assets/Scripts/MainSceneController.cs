@@ -4,26 +4,55 @@ using UnityEngine;
 
 public class MainSceneController : MonoBehaviour
 {
-    public static GameObject gameObjectOne;
-    public static GameObject gameObjectTwo;
-    public static GameObject gameObjectThree;
-    public static GameObject gameObjectFour;
-    public static GameObject gameObjectFive;
-    public static GameObject gameObjectSix;
-    public static GameObject gameObjectSeven;
-    public static GameObject gameObjectEight;
-    public static GameObject Seaweed;
+    public GameObject gameObjectOne;
+    public GameObject gameObjectTwo;
+    public GameObject gameObjectThree;
+    public GameObject gameObjectFour;
+    public GameObject gameObjectFive;
+    public GameObject gameObjectSix;
+    public GameObject gameObjectSeven;
+    public GameObject gameObjectEight;
     // Start is called before the first frame update
     void Start()
     {
-        gameObjectOne = GameObject.FindGameObjectWithTag("One");
+        /*gameObjectOne = GameObject.FindGameObjectWithTag("One");
         gameObjectTwo = GameObject.FindGameObjectWithTag("Two");
         gameObjectThree = GameObject.FindGameObjectWithTag("Three");
         gameObjectFour = GameObject.FindGameObjectWithTag("Four");
         gameObjectFive = GameObject.FindGameObjectWithTag("Five");
         gameObjectSix = GameObject.FindGameObjectWithTag("Six");
         gameObjectSeven = GameObject.FindGameObjectWithTag("Seven");
-        gameObjectEight = GameObject.FindGameObjectWithTag("Eight");
+        gameObjectEight = GameObject.FindGameObjectWithTag("Eight");*/
+
+        string SelectedButton = PlayerPrefs.GetString("Button");
+        switch(SelectedButton)
+        {
+            case "buttonOne":
+                gameObjectOne.SetActive(true);
+                Debug.Log("ActiveOne");
+            break;
+            case "buttonTwo":
+                gameObjectTwo.SetActive(true);
+            break;
+            case "buttonThree":
+                gameObjectThree.SetActive(true);
+            break;
+            case "buttonFour":
+                gameObjectFour.SetActive(true);
+            break;
+            case "buttonFive":
+                gameObjectFive.SetActive(true);
+            break;
+            case "buttonSix":
+                gameObjectSix.SetActive(true);
+            break;
+            case "buttonSeven":
+                gameObjectSeven.SetActive(true);
+            break;
+            case "buttonEight":
+                gameObjectEight.SetActive(true);
+            break;
+        }
 
     }
 

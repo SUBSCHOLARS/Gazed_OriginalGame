@@ -23,7 +23,7 @@ public class SurvivalTimeController : MonoBehaviour
         timer = 100 - Detimer;
         ScorePotentialTimer += Time.deltaTime;
         SurvivalTimeSecond.text = timer.ToString("000.0");
-        if(timer == 0)
+        if(timer <= 0)
         {
             SceneManager.LoadScene("GameClear");
         }

@@ -9,18 +9,19 @@ public class ShopController : MonoBehaviour
     public Button BuyButton;
     public GameObject SelectCanvas;
     public Button[] Buttons = new Button[8];
+    public GameObject[] gameObjects = new GameObject[8];
     public Button ResurviveButton;
     public Text ScoreText;
     public static int CountSeaweed = 0;
     private Vector3[] VectorArray = {
-        new Vector3(-100, 0, 0),
-        new Vector3(0, 0, 0),
-        new Vector3(100, 0, 0),
-        new Vector3(100, 0, -100),
-        new Vector3(100, 0, -200),
-        new Vector3(0, 0, -200),
-        new Vector3(-100, 0, -200),
-        new Vector3(-100, 0, -100)
+        new Vector3(-100, 10, 0),
+        new Vector3(0, 10, 0),
+        new Vector3(100, 10, 0),
+        new Vector3(100, 10, -100),
+        new Vector3(100, 10, -200),
+        new Vector3(0, 10, -200),
+        new Vector3(-100, 10, -200),
+        new Vector3(-100, 10, -100)
     };
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class ShopController : MonoBehaviour
         
     }
 
-    void OnBuyButtonClicked()
+    public void OnBuyButtonClicked()
     {
         ResurviveButton.gameObject.SetActive(true);
         SelectCanvas.SetActive(true);
@@ -44,66 +45,78 @@ public class ShopController : MonoBehaviour
             Buttons[i].gameObject.SetActive(true);
         }
     }
-    public void OnOneVectorButtonClicked()
+    public void OnOneVectorButtonClicked(string buttonOne)
     {
-        PlayerPrefs.SetFloat("SeaweedXOne", VectorArray[0].x);
-        PlayerPrefs.SetFloat("SeaweedYOne", VectorArray[0].y);
-        PlayerPrefs.SetFloat("SeaweedZOne", VectorArray[0].z);
-        MainSceneController.gameObjectOne.SetActive(true);
+        Vector3 spawnPosOne = new Vector3(-100, 10, 0);
+        PlayerPrefs.SetFloat("SeaweedXOne", spawnPosOne.x);
+        PlayerPrefs.SetFloat("SeaweedYOne", spawnPosOne.y);
+        PlayerPrefs.SetFloat("SeaweedZOne", spawnPosOne.z);
+        Debug.Log("Saved Location");
+        gameObjects[0].SetActive(true);
+        PlayerPrefs.SetString("Button", buttonOne);
+        Debug.Log("Saved Button");
+        //MainSceneController.gameObjectOne.SetActive(true);
     }
-    public void OnTwoVectorButtonClicked()
+    public void OnTwoVectorButtonClicked(string buttonTwo)
     {
         PlayerPrefs.SetFloat("SeaweedXTwo", VectorArray[1].x);
         PlayerPrefs.SetFloat("SeaweedYTwo", VectorArray[1].y);
         PlayerPrefs.SetFloat("SeaweedZTwo", VectorArray[1].z);
-        MainSceneController.gameObjectTwo.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonTwo);
+        //MainSceneController.gameObjectTwo.SetActive(true);
     }
-    public void OnThreeVectorButtonClicked()
+    public void OnThreeVectorButtonClicked(string buttonThree)
     {
         PlayerPrefs.SetFloat("SeaweedXThree", VectorArray[2].x);
         PlayerPrefs.SetFloat("SeaweedYThree", VectorArray[2].y);
         PlayerPrefs.SetFloat("SeaweedZThree", VectorArray[2].z);
-        MainSceneController.gameObjectThree.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonThree);
+        //MainSceneController.gameObjectThree.SetActive(true);
     }
-    public void OnFourVectorButtonClicked()
+    public void OnFourVectorButtonClicked(string buttonFour)
     {
         PlayerPrefs.SetFloat("SeaweedXFour", VectorArray[3].x);
         PlayerPrefs.SetFloat("SeaweedYFour", VectorArray[3].y);
         PlayerPrefs.SetFloat("SeaweedZFour", VectorArray[3].z);
-        MainSceneController.gameObjectFour.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonFour);
+        //MainSceneController.gameObjectFour.SetActive(true);
     }
-    public void OnFiveVectorButtonClicked()
+    public void OnFiveVectorButtonClicked(string buttonFive)
     {
         PlayerPrefs.SetFloat("SeaweedXFive", VectorArray[4].x);
         PlayerPrefs.SetFloat("SeaweedYFive", VectorArray[4].y);
         PlayerPrefs.SetFloat("SeaweedZFive", VectorArray[4].z);
-        MainSceneController.gameObjectFive.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonFive);
+        //MainSceneController.gameObjectFive.SetActive(true);
     }
-    public void OnSixVectorButtonClicked()
+    public void OnSixVectorButtonClicked(string buttonSix)
     {
         PlayerPrefs.SetFloat("SeaweedXSix", VectorArray[5].x);
         PlayerPrefs.SetFloat("SeaweedYSix", VectorArray[5].y);
         PlayerPrefs.SetFloat("SeaweedZSix", VectorArray[5].z);
-        MainSceneController.gameObjectSix.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonSix);
+        //MainSceneController.gameObjectSix.SetActive(true);
     }
-    public void OnSevenVectorButtonClicked()
+    public void OnSevenVectorButtonClicked(string buttonSeven)
     {
         PlayerPrefs.SetFloat("SeaweedXSeven", VectorArray[6].x);
         PlayerPrefs.SetFloat("SeaweedYSeven", VectorArray[6].y);
         PlayerPrefs.SetFloat("SeaweedZSeven", VectorArray[6].z);
-        MainSceneController.gameObjectSeven.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonSeven);
+        //MainSceneController.gameObjectSeven.SetActive(true);
     }
-    public void OnEightVectorButtonClicked()
+    public void OnEightVectorButtonClicked(string buttonEight)
     {
         PlayerPrefs.SetFloat("SeaweedXEight", VectorArray[7].x);
         PlayerPrefs.SetFloat("SeaweedYEight", VectorArray[7].y);
         PlayerPrefs.SetFloat("SeaweedZEight", VectorArray[7].z);
-        MainSceneController.gameObjectEight.SetActive(true);
+        PlayerPrefs.SetString("Button", buttonEight);
+        //MainSceneController.gameObjectEight.SetActive(true);
     }
 
-    void OnResurviveButtonClicked()
+    public void OnResurviveButtonClicked()
     {
-        CountSeaweed++;
+        //CountSeaweed++;
         SceneManager.LoadScene("Main");
     }
 }

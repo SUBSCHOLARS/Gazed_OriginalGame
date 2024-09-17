@@ -31,7 +31,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(i == 4)
             {
-                VectorArray[i] = new Vector3(Random.Range(-130, 130), 40, Random.Range(-230,30));
+                VectorArray[i] = new Vector3(Random.Range(-130, 130), 60, Random.Range(-230,30));
             }
             else if(i == 5)
             {

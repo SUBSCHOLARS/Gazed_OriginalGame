@@ -14,6 +14,8 @@ public class SpawnEight : MonoBehaviour
         Vector3 spawnPosition = new Vector3(spawnX, spawnY, spawnZ);
 
         Instantiate(Seaweed, spawnPosition, Quaternion.identity);
+
+        DontDestroyOnLoad(Seaweed);
     }
 
     // Update is called once per frame

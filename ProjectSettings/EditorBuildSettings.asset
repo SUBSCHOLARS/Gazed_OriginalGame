@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleAfterFirst.unity
     guid: 69f5945e0cfe3ef41af231e276cba256
+  - enabled: 1
+    path: Assets/Scenes/Explanation.unity
+    guid: 6ddcdbbeb71b40b408a716aa8b12555f
   m_configObjects: {}

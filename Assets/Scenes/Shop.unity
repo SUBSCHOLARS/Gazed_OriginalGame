@@ -324,14 +324,23 @@ MonoBehaviour:
   BuyButton: {fileID: 154137386}
   SelectCanvas: {fileID: 1366171574}
   Buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1666421250}
+  - {fileID: 1489399933}
+  - {fileID: 2122441288}
+  - {fileID: 1165695203}
+  - {fileID: 634788058}
+  - {fileID: 833008864}
+  - {fileID: 255958694}
+  - {fileID: 1610788529}
+  gameObjects:
+  - {fileID: 8976935099272897, guid: 92ac7a4eaa731304ba361917667dc3d4, type: 3}
+  - {fileID: 8779516716393121786, guid: 77e4d7a9e85084d43b9c12a84f6c5072, type: 3}
+  - {fileID: 4179304422227517697, guid: 6e2d31b4e9f621843bb451d21cd1976f, type: 3}
+  - {fileID: 6032172723775446654, guid: 10f359f48fd14914eadc4f4c1f9669a3, type: 3}
+  - {fileID: 6622207154423192890, guid: b95f3ecdc52e9fa47a389a05cf0badd4, type: 3}
+  - {fileID: 4039731986803536404, guid: 62df0a4ec0f5c82479f3d5e6d7b46ef2, type: 3}
+  - {fileID: 2799594067416289646, guid: b84be717f4a167c4da5db193aa578605, type: 3}
+  - {fileID: 973232591419026162, guid: 208a8eb317198364da7fce05d1675308, type: 3}
   ResurviveButton: {fileID: 324687893}
   ScoreText: {fileID: 31804614}
 --- !u!1 &116581593
@@ -495,7 +504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 154137387}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89455718}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &154137387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +754,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 275833857}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -788,7 +810,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnSevenVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -940,12 +962,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 255958693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -110.00001}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275833858
 MonoBehaviour:
@@ -1094,12 +1116,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 1666421249}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: 85}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305254868
 MonoBehaviour:
@@ -1205,7 +1227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 324687894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89455718}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: OnResurviveButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &324687894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,7 +1647,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 643892751}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1668,7 +1703,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnFiveVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1745,12 +1780,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 634788057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 100, y: -110.00001}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643892752
 MonoBehaviour:
@@ -1945,12 +1980,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 1610788528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -15.000005}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780969045
 MonoBehaviour:
@@ -2274,7 +2309,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1143213348}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2329,7 +2365,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnSixVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2406,12 +2442,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 1165695202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 100, y: -9.999996}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1098863702
 MonoBehaviour:
@@ -2485,12 +2521,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 833008863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -110.00001}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143213349
 MonoBehaviour:
@@ -2564,7 +2600,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1098863701}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2619,7 +2656,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnFourVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2696,12 +2733,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 1489399932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 85}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172821048
 MonoBehaviour:
@@ -2851,21 +2888,13 @@ RectTransform:
   - {fileID: 1941983975}
   - {fileID: 409906233}
   - {fileID: 1666421249}
-  - {fileID: 305254867}
   - {fileID: 1489399932}
-  - {fileID: 1172821047}
   - {fileID: 2122441287}
-  - {fileID: 1803826999}
   - {fileID: 1165695202}
-  - {fileID: 1098863701}
   - {fileID: 634788057}
-  - {fileID: 643892751}
   - {fileID: 833008863}
-  - {fileID: 1143213348}
   - {fileID: 255958693}
-  - {fileID: 275833857}
   - {fileID: 1610788528}
-  - {fileID: 780969044}
   - {fileID: 1385805565}
   - {fileID: 324687896}
   m_Father: {fileID: 1837071578}
@@ -2984,7 +3013,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1172821047}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3039,7 +3069,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnTwoVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3195,7 +3225,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 780969044}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3250,7 +3281,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnEightVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3327,7 +3358,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 305254867}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3382,7 +3414,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnOneVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3538,12 +3570,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1366171575}
+  m_Father: {fileID: 2122441287}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 100, y: 85}
-  m_SizeDelta: {x: -70, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803827000
 MonoBehaviour:
@@ -4136,7 +4168,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1803826999}
   m_Father: {fileID: 1366171575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4191,7 +4224,7 @@ MonoBehaviour:
       - m_Target: {fileID: 89455718}
         m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: OnThreeVectorButtonClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
