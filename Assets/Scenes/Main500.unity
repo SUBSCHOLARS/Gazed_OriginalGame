@@ -14455,7 +14455,7 @@ GameObject:
   - component: {fileID: 1922621579}
   - component: {fileID: 1922621582}
   - component: {fileID: 1922621581}
-  - component: {fileID: 1922621580}
+  - component: {fileID: 1922621583}
   m_Layer: 5
   m_Name: SurvivalTimeText
   m_TagString: Untagged
@@ -14482,19 +14482,6 @@ RectTransform:
   m_AnchoredPosition: {x: 249, y: 170}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1922621580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922621578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1440846e33380bb49b39820942eda07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SurvivalTimeSecond: {fileID: 1922621581}
 --- !u!114 &1922621581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14528,7 +14515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100.0
+  m_Text: 500.0
 --- !u!222 &1922621582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14537,6 +14524,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922621578}
   m_CullTransparentMesh: 1
+--- !u!114 &1922621583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922621578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f20abc7fcb811b43b96d2a72366bd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SurvivalTimeSecond: {fileID: 1922621581}
 --- !u!1 &1940515140
 GameObject:
   m_ObjectHideFlags: 0

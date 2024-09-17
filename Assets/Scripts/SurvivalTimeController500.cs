@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SurvivalTimeController : MonoBehaviour
+public class SurvivalTimeController500 : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
     public static float timer;
@@ -20,7 +20,7 @@ public class SurvivalTimeController : MonoBehaviour
     void Update()
     {
         Detimer += Time.deltaTime;
-        timer = 100 - Detimer;
+        timer = 500 - Detimer;
         ScorePotentialTimer += Time.deltaTime;
         SurvivalTimeSecond.text = timer.ToString("000.0");
         if(timer == 0)
