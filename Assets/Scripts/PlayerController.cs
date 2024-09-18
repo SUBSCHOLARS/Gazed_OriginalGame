@@ -26,30 +26,11 @@ public class PlayerController : MonoBehaviour
         float moveForward = Input.GetAxis("Horizontal") * MovingSpeed * Time.deltaTime;
         float moveRight = Input.GetAxis("Vertical") * MovingSpeed * Time.deltaTime;
 
-        float newX = moveForward * Mathf.Cos(rotationAngle) - moveRight * Mathf.Sin(rotationAngle);
-        float newZ = moveForward * Mathf.Sin(rotationAngle) + moveRight * Mathf.Cos(rotationAngle);
+        float RotationMatrixX = moveForward * Mathf.Cos(rotationAngle) - moveRight * Mathf.Sin(rotationAngle);
+        float RotationMatrixZ = moveForward * Mathf.Sin(rotationAngle) + moveRight * Mathf.Cos(rotationAngle);
 
-        this.transform.position += new Vector3(newX, 0, newZ);
-        /*Vector3 moveDirection = Vector3.zero;
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            moveDirection -= transform.forward;
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            moveDirection += transform.forward;
-        }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            moveDirection += transform.right;
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            moveDirection -= transform.right;
-        }
-
-        transform.Translate(moveDirection.normalized * MovingSpeed * Time.deltaTime);*/
+        this.transform.position += new Vector3(RotationMatrixX, 0, RotationMatrixZ);
+        
 
         if(Input.GetMouseButton(0))
         {
@@ -64,7 +45,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
-            PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
+            //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             SurvivalTimeController.timer = 0;
         }
     }

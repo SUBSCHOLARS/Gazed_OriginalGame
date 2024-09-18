@@ -343,6 +343,8 @@ MonoBehaviour:
   - {fileID: 973232591419026162, guid: 208a8eb317198364da7fce05d1675308, type: 3}
   ResurviveButton: {fileID: 324687893}
   ScoreText: {fileID: 31804614}
+  accumulatedScores: 0
+  AccumulatedScore: {fileID: 31804614}
 --- !u!1 &116581593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,7 +3533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: It will be placed on the random position
+  m_Text: You will select the places to put
 --- !u!222 &1712259971
 CanvasRenderer:
   m_ObjectHideFlags: 0

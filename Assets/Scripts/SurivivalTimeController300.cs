@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SurivivalTimeController300 : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
-    public static float timer;
+    public static float timer = 0;
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
     // Start is called before the first frame update
@@ -26,6 +26,10 @@ public class SurivivalTimeController300 : MonoBehaviour
         if(timer <= 0)
         {
             SceneManager.LoadScene("GameClear");
+            PlayerPrefs.SetFloat("SurvivedScore", ScorePotentialTimer);
+            PlayerPrefs.SetFloat("SurvivedTime", timer);
+            //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
+            SurvivalTimeController.timer = 0;
         }
     }
 }

@@ -38,6 +38,6 @@ public class Novel : MonoBehaviour
     private void EndNovelGame()
     {
         Debug.Log("ノベルゲームを終了しました");
-        DiffPanel.SetActive(true);
+        SceneManager.LoadScene("DiffSelect");
     }
 }

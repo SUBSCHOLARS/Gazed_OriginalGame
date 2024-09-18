@@ -13,6 +13,9 @@ public class ShopController : MonoBehaviour
     public Button ResurviveButton;
     public Text ScoreText;
     public static int CountSeaweed = 0;
+    public static float accumulatedScores = 0;
+    public static float accumulatedScore;
+    public Text AccumulatedScore;
     private Vector3[] VectorArray = {
         new Vector3(-100, 10, 0),
         new Vector3(0, 10, 0),
@@ -33,7 +36,9 @@ public class ShopController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        accumulatedScores += accumulatedScore;
+        AccumulatedScore.text = accumulatedScore.ToString("0000");
     }
 
     public void OnBuyButtonClicked()
@@ -59,57 +64,73 @@ public class ShopController : MonoBehaviour
     }
     public void OnTwoVectorButtonClicked(string buttonTwo)
     {
-        PlayerPrefs.SetFloat("SeaweedXTwo", VectorArray[1].x);
-        PlayerPrefs.SetFloat("SeaweedYTwo", VectorArray[1].y);
-        PlayerPrefs.SetFloat("SeaweedZTwo", VectorArray[1].z);
+        Vector3 spawnPosTwo = new Vector3(0, 10, 0);
+        PlayerPrefs.SetFloat("SeaweedXTwo", spawnPosTwo.x);
+        PlayerPrefs.SetFloat("SeaweedYTwo", spawnPosTwo.y);
+        PlayerPrefs.SetFloat("SeaweedZTwo", spawnPosTwo.z);
+        Debug.Log("Saved Location");
+        gameObjects[1].SetActive(true);
         PlayerPrefs.SetString("Button", buttonTwo);
+        Debug.Log("Saved Button");
         //MainSceneController.gameObjectTwo.SetActive(true);
     }
     public void OnThreeVectorButtonClicked(string buttonThree)
     {
-        PlayerPrefs.SetFloat("SeaweedXThree", VectorArray[2].x);
-        PlayerPrefs.SetFloat("SeaweedYThree", VectorArray[2].y);
-        PlayerPrefs.SetFloat("SeaweedZThree", VectorArray[2].z);
+        Vector3 spawwnPosThree = new Vector3(100, 10, 0);
+        PlayerPrefs.SetFloat("SeaweedXThree", spawwnPosThree.x);
+        PlayerPrefs.SetFloat("SeaweedYThree", spawwnPosThree.y);
+        PlayerPrefs.SetFloat("SeaweedZThree", spawwnPosThree.z);
+        gameObjects[2].SetActive(true);
         PlayerPrefs.SetString("Button", buttonThree);
         //MainSceneController.gameObjectThree.SetActive(true);
     }
     public void OnFourVectorButtonClicked(string buttonFour)
     {
-        PlayerPrefs.SetFloat("SeaweedXFour", VectorArray[3].x);
-        PlayerPrefs.SetFloat("SeaweedYFour", VectorArray[3].y);
-        PlayerPrefs.SetFloat("SeaweedZFour", VectorArray[3].z);
+        Vector3 spawnPosFour = new Vector3(100, 10, -100);
+        PlayerPrefs.SetFloat("SeaweedXFour", spawnPosFour.x);
+        PlayerPrefs.SetFloat("SeaweedYFour", spawnPosFour.y);
+        PlayerPrefs.SetFloat("SeaweedZFour", spawnPosFour.z);
+        gameObjects[3].SetActive(true);
         PlayerPrefs.SetString("Button", buttonFour);
         //MainSceneController.gameObjectFour.SetActive(true);
     }
     public void OnFiveVectorButtonClicked(string buttonFive)
     {
-        PlayerPrefs.SetFloat("SeaweedXFive", VectorArray[4].x);
-        PlayerPrefs.SetFloat("SeaweedYFive", VectorArray[4].y);
-        PlayerPrefs.SetFloat("SeaweedZFive", VectorArray[4].z);
+        Vector3 spawnPosFive = new Vector3(100, 10, -200);
+        PlayerPrefs.SetFloat("SeaweedXFive", spawnPosFive.x);
+        PlayerPrefs.SetFloat("SeaweedYFive", spawnPosFive.y);
+        PlayerPrefs.SetFloat("SeaweedZFive", spawnPosFive.z);
+        gameObjects[4].SetActive(true);
         PlayerPrefs.SetString("Button", buttonFive);
         //MainSceneController.gameObjectFive.SetActive(true);
     }
     public void OnSixVectorButtonClicked(string buttonSix)
     {
-        PlayerPrefs.SetFloat("SeaweedXSix", VectorArray[5].x);
-        PlayerPrefs.SetFloat("SeaweedYSix", VectorArray[5].y);
-        PlayerPrefs.SetFloat("SeaweedZSix", VectorArray[5].z);
+        Vector3 spawnPosSix = new Vector3(0, 10, -200);
+        PlayerPrefs.SetFloat("SeaweedXSix", spawnPosSix.x);
+        PlayerPrefs.SetFloat("SeaweedYSix", spawnPosSix.y);
+        PlayerPrefs.SetFloat("SeaweedZSix", spawnPosSix.z);
+        gameObjects[5].SetActive(true);
         PlayerPrefs.SetString("Button", buttonSix);
         //MainSceneController.gameObjectSix.SetActive(true);
     }
     public void OnSevenVectorButtonClicked(string buttonSeven)
     {
-        PlayerPrefs.SetFloat("SeaweedXSeven", VectorArray[6].x);
-        PlayerPrefs.SetFloat("SeaweedYSeven", VectorArray[6].y);
-        PlayerPrefs.SetFloat("SeaweedZSeven", VectorArray[6].z);
+        Vector3 spawnPosSeven = new Vector3(-100, 10, -200);
+        PlayerPrefs.SetFloat("SeaweedXSeven", spawnPosSeven.x);
+        PlayerPrefs.SetFloat("SeaweedYSeven", spawnPosSeven.y);
+        PlayerPrefs.SetFloat("SeaweedZSeven", spawnPosSeven.z);
+        gameObjects[6].SetActive(true);
         PlayerPrefs.SetString("Button", buttonSeven);
         //MainSceneController.gameObjectSeven.SetActive(true);
     }
     public void OnEightVectorButtonClicked(string buttonEight)
     {
-        PlayerPrefs.SetFloat("SeaweedXEight", VectorArray[7].x);
-        PlayerPrefs.SetFloat("SeaweedYEight", VectorArray[7].y);
-        PlayerPrefs.SetFloat("SeaweedZEight", VectorArray[7].z);
+        Vector3 spawnPosEight = new Vector3(-100, 10, -100);
+        PlayerPrefs.SetFloat("SeaweedXEight", spawnPosEight.x);
+        PlayerPrefs.SetFloat("SeaweedYEight", spawnPosEight.y);
+        PlayerPrefs.SetFloat("SeaweedZEight", spawnPosEight.z);
+        gameObjects[7].SetActive(true);
         PlayerPrefs.SetString("Button", buttonEight);
         //MainSceneController.gameObjectEight.SetActive(true);
     }

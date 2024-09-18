@@ -8,7 +8,8 @@ public class TitleController : MonoBehaviour
     public Text LongestSurvivedTimeMinute;
     public Text LongestSurvivedTime;
     public Text AccumulatedScore;
-    float accumulatedScores = 0;
+    public static float accumulatedScores = 0;
+    public static float accumulatedScore;
     private float survivedScore;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class TitleController : MonoBehaviour
             PlayerPrefs.SetFloat("HighScore", survivedScore);
         }
 
-        if(highScore < 60)
+        /*if(highScore < 60)
         {
             LongestSurvivedTime.text = highScore.ToString("00.0");
         }
@@ -34,10 +35,10 @@ public class TitleController : MonoBehaviour
         {
             LongestSurvivedTime.text = (highScore / 60).ToString("00.0");
             LongestSurvivedTimeMinute.text = (highScore % 60).ToString("00");
-        }
+        }*/
 
-        float accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        accumulatedScores *= accumulatedScore;
+        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        accumulatedScores += accumulatedScore;
         AccumulatedScore.text = accumulatedScore.ToString("0000");
     }
 }
