@@ -1319,8 +1319,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2097197326}
-        m_TargetAssemblyTypeName: GameStarter, Assembly-CSharp
-        m_MethodName: GameStart
+        m_TargetAssemblyTypeName: Main500Starter, Assembly-CSharp
+        m_MethodName: Main500Start
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2097197321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e879cd3d1ce209343a0cea32e0a93561, type: 3}
+  m_Script: {fileID: 11500000, guid: e00603c72cad31d4293accb1e8b08620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2128400351

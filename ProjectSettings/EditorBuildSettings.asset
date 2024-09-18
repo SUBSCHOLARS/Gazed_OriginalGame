@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DiffSelect.unity
     guid: 07918658e93931f4d8cbdbb809378a32
+  - enabled: 1
+    path: Assets/Scenes/GameOver300.unity
+    guid: 9380fe9569c720840bbb6bb5687bc854
+  - enabled: 1
+    path: Assets/Scenes/GameOver500.unity
+    guid: 1a9b14bbf7f5038418b0bfbee6140ae2
   m_configObjects: {}

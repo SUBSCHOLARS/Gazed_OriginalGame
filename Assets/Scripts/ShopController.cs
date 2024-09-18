@@ -17,10 +17,10 @@ public class ShopController : MonoBehaviour
     public static float accumulatedScore;
     public Text AccumulatedScore;
     private Vector3[] VectorArray = {
-        new Vector3(-100, 10, 0),
-        new Vector3(0, 10, 0),
-        new Vector3(100, 10, 0),
-        new Vector3(100, 10, -100),
+        new Vector3(-100, 30, 0),
+        new Vector3(0, 30, 0),
+        new Vector3(100, 30, 0),
+        new Vector3(100, 30, -100),
         new Vector3(100, 10, -200),
         new Vector3(0, 10, -200),
         new Vector3(-100, 10, -200),
@@ -38,11 +38,12 @@ public class ShopController : MonoBehaviour
     {
         accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         accumulatedScores += accumulatedScore;
-        AccumulatedScore.text = accumulatedScore.ToString("0000");
+        AccumulatedScore.text = accumulatedScores.ToString("0000");
     }
 
     public void OnBuyButtonClicked()
     {
+        accumulatedScores -= 200;
         ResurviveButton.gameObject.SetActive(true);
         SelectCanvas.SetActive(true);
         for(int i = 0; i < Buttons.Length; i++)
@@ -52,7 +53,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnOneVectorButtonClicked(string buttonOne)
     {
-        Vector3 spawnPosOne = new Vector3(-100, 10, 0);
+        Vector3 spawnPosOne = new Vector3(-100, 30, 0);
         PlayerPrefs.SetFloat("SeaweedXOne", spawnPosOne.x);
         PlayerPrefs.SetFloat("SeaweedYOne", spawnPosOne.y);
         PlayerPrefs.SetFloat("SeaweedZOne", spawnPosOne.z);
@@ -64,7 +65,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnTwoVectorButtonClicked(string buttonTwo)
     {
-        Vector3 spawnPosTwo = new Vector3(0, 10, 0);
+        Vector3 spawnPosTwo = new Vector3(0, 30, 0);
         PlayerPrefs.SetFloat("SeaweedXTwo", spawnPosTwo.x);
         PlayerPrefs.SetFloat("SeaweedYTwo", spawnPosTwo.y);
         PlayerPrefs.SetFloat("SeaweedZTwo", spawnPosTwo.z);
@@ -76,7 +77,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnThreeVectorButtonClicked(string buttonThree)
     {
-        Vector3 spawwnPosThree = new Vector3(100, 10, 0);
+        Vector3 spawwnPosThree = new Vector3(100, 30, 0);
         PlayerPrefs.SetFloat("SeaweedXThree", spawwnPosThree.x);
         PlayerPrefs.SetFloat("SeaweedYThree", spawwnPosThree.y);
         PlayerPrefs.SetFloat("SeaweedZThree", spawwnPosThree.z);
@@ -86,7 +87,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnFourVectorButtonClicked(string buttonFour)
     {
-        Vector3 spawnPosFour = new Vector3(100, 10, -100);
+        Vector3 spawnPosFour = new Vector3(100, 30, -100);
         PlayerPrefs.SetFloat("SeaweedXFour", spawnPosFour.x);
         PlayerPrefs.SetFloat("SeaweedYFour", spawnPosFour.y);
         PlayerPrefs.SetFloat("SeaweedZFour", spawnPosFour.z);
@@ -96,7 +97,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnFiveVectorButtonClicked(string buttonFive)
     {
-        Vector3 spawnPosFive = new Vector3(100, 10, -200);
+        Vector3 spawnPosFive = new Vector3(100, 30, -200);
         PlayerPrefs.SetFloat("SeaweedXFive", spawnPosFive.x);
         PlayerPrefs.SetFloat("SeaweedYFive", spawnPosFive.y);
         PlayerPrefs.SetFloat("SeaweedZFive", spawnPosFive.z);
@@ -106,7 +107,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnSixVectorButtonClicked(string buttonSix)
     {
-        Vector3 spawnPosSix = new Vector3(0, 10, -200);
+        Vector3 spawnPosSix = new Vector3(0, 30, -200);
         PlayerPrefs.SetFloat("SeaweedXSix", spawnPosSix.x);
         PlayerPrefs.SetFloat("SeaweedYSix", spawnPosSix.y);
         PlayerPrefs.SetFloat("SeaweedZSix", spawnPosSix.z);
@@ -116,7 +117,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnSevenVectorButtonClicked(string buttonSeven)
     {
-        Vector3 spawnPosSeven = new Vector3(-100, 10, -200);
+        Vector3 spawnPosSeven = new Vector3(-100, 30, -200);
         PlayerPrefs.SetFloat("SeaweedXSeven", spawnPosSeven.x);
         PlayerPrefs.SetFloat("SeaweedYSeven", spawnPosSeven.y);
         PlayerPrefs.SetFloat("SeaweedZSeven", spawnPosSeven.z);
@@ -126,7 +127,7 @@ public class ShopController : MonoBehaviour
     }
     public void OnEightVectorButtonClicked(string buttonEight)
     {
-        Vector3 spawnPosEight = new Vector3(-100, 10, -100);
+        Vector3 spawnPosEight = new Vector3(-100, 30, -100);
         PlayerPrefs.SetFloat("SeaweedXEight", spawnPosEight.x);
         PlayerPrefs.SetFloat("SeaweedYEight", spawnPosEight.y);
         PlayerPrefs.SetFloat("SeaweedZEight", spawnPosEight.z);

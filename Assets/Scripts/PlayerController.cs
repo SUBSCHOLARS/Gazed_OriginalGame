@@ -41,12 +41,28 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Cat"))
-        {
-            SceneManager.LoadScene("GameOver");
+        {       
+            string currentSceneName = SceneManager.GetActiveScene().name;   
             PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
-            //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             SurvivalTimeController.timer = 0;
+            SurivivalTimeController300.timer = 0;
+            SurvivalTimeController500.timer = 0;
+            switch(currentSceneName)
+            {
+                case "Main":
+                    SceneManager.LoadScene("GameOver");
+                    break;
+                case "Main300":
+                    SceneManager.LoadScene("GameOver300");
+                    break;
+                case "Main500":
+                    SceneManager.LoadScene("GameOver500");
+                    break;
+                default:
+                    return;
+            }
+            //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
         }
     }
 }

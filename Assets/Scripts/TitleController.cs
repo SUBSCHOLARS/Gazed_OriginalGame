@@ -39,6 +39,6 @@ public class TitleController : MonoBehaviour
 
         accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         accumulatedScores += accumulatedScore;
-        AccumulatedScore.text = accumulatedScore.ToString("0000");
+        AccumulatedScore.text = accumulatedScores.ToString("0000");
     }
 }
