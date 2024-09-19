@@ -45,9 +45,12 @@ public class PlayerController : MonoBehaviour
             string currentSceneName = SceneManager.GetActiveScene().name;   
             PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
-            SurvivalTimeController.timer = 100;
-            SurivivalTimeController300.timer = 300;
-            SurvivalTimeController500.timer = 500;
+            /*SurvivalTimeController.timer += SurvivalTimeController.Detimer;
+            SurivivalTimeController300.timer += SurivivalTimeController300.Detimer;
+            SurvivalTimeController500.timer += SurvivalTimeController500.Detimer;*/
+            SurvivalTimeController.Detimer = 0;
+            SurivivalTimeController300.Detimer = 0;
+            SurvivalTimeController500.Detimer = 0;
             switch(currentSceneName)
             {
                 case "Main":

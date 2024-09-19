@@ -1526,7 +1526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: SURVIVE!
+  m_Text: "\u751F\u304D\u6B8B\u308C!"
 --- !u!222 &1440542069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: CURRENT SCORE
+  m_Text: "\u73FE\u5728\u306E\u30B9\u30B3\u30A2"
 --- !u!222 &1781513915
 CanvasRenderer:
   m_ObjectHideFlags: 0

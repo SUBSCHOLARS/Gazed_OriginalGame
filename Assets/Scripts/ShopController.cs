@@ -15,6 +15,7 @@ public class ShopController : MonoBehaviour
     public Button ResurviveButton;
     public Text ScoreText;
     public static int CountSeaweed = 0;
+    public Button TitleButton;
     
     public Text AccumulatedScore;
     private Vector3[] VectorArray = {
@@ -31,9 +32,9 @@ public class ShopController : MonoBehaviour
     void Start()
     {
         float clearScore = PlayerPrefs.GetFloat("ClearSocre", 0f);
-        TitleController.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        TitleController.accumulatedScores += TitleController.accumulatedScore;
-        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
+        ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        ScoreManager.accumulatedScores += ScoreManager.accumulatedScore;
+        AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
         //BuyButton.onClick.AddListener(OnBuyButtonClicked);
         //ResurviveButton.onClick.AddListener(OnResurviveButtonClicked);
     }
@@ -46,10 +47,10 @@ public class ShopController : MonoBehaviour
 
     public void OnBuyButtonClicked()
     {
-        if(TitleController.accumulatedScores > 200)
+        if(ScoreManager.accumulatedScores > 200)
         {
-        TitleController.accumulatedScores -= 200;
-        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
+        ScoreManager.accumulatedScores -= 200;
+        AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
         ResurviveButton.gameObject.SetActive(true);
         SelectCanvas.SetActive(true);
         for(int i = 0; i < Buttons.Length; i++)
@@ -60,6 +61,7 @@ public class ShopController : MonoBehaviour
         else
         {
             SeaweedText.text = SeaweedLine;
+            TitleButton.gameObject.SetActive(true);
         }
     }
     public void OnOneVectorButtonClicked(string buttonOne)
@@ -149,7 +151,21 @@ public class ShopController : MonoBehaviour
 
     public void OnResurviveButtonClicked()
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
         //CountSeaweed++;
-        SceneManager.LoadScene("Main");
+        switch(currentSceneName)
+            {
+                case "Shop":
+                    SceneManager.LoadScene("Main");
+                    break;
+                case "Shop300":
+                    SceneManager.LoadScene("Main300");
+                    break;
+                case "Shop500":
+                    SceneManager.LoadScene("Main500");
+                    break;
+                default:
+                    return;
+            }
     }
 }

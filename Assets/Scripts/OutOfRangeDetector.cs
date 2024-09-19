@@ -20,7 +20,21 @@ public class OutOfRangeDetector : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("GameOver");
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            switch(currentSceneName)
+            {
+                case "Main":
+                    SceneManager.LoadScene("GameOver");
+                    break;
+                case "Main300":
+                    SceneManager.LoadScene("GameOver300");
+                    break;
+                case "Main500":
+                    SceneManager.LoadScene("GameOver500");
+                    break;
+                default:
+                    return;
+            }
             PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
             PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);

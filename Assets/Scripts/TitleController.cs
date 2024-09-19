@@ -8,15 +8,15 @@ public class TitleController : MonoBehaviour
     public Text LongestSurvivedTimeMinute;
     public Text LongestSurvivedTime;
     public Text AccumulatedScore;
-    public static float accumulatedScores = 0;
-    public static float accumulatedScore;
+    /*public static float accumulatedScores = 0;
+    public static float accumulatedScore;*/
     private float survivedScore;
     // Start is called before the first frame update
     void Start()
     {
-        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        accumulatedScores += accumulatedScore;
-        AccumulatedScore.text = accumulatedScores.ToString("0000");
+        /*ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        ScoreManager.accumulatedScores += ScoreManager.accumulatedScore;*/
+        AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
         //Time.timeScale = 0;
     }
 

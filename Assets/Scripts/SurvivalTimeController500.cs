@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SurvivalTimeController500 : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
-    public static float timer = 0;
+    public static float timer = 500;
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
     // Start is called before the first frame update

@@ -9,18 +9,16 @@ public class GameClearController : MonoBehaviour
     public Text AccumulatedScore;
     public float bonusScore = 100;
     private float survivedScore;
-    
-    //private float survivedTime;
-    //private int survivedTimeMinute;
     // Start is called before the first frame update
     void Start()
     {
-        survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f) + bonusScore;
+        //survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f) + bonusScore;
         SurvivedTimeScore.text = (SurvivalTimeController.ScorePotentialTimer + bonusScore).ToString("0000");
         
-        TitleController.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        TitleController.accumulatedScores += survivedScore;
-        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
+        /*ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        ScoreManager.accumulatedScores += survivedScore;*/
+        ScoreManager.accumulatedScores += bonusScore;
+        AccumulatedScore.text = (ScoreManager.accumulatedScores + bonusScore).ToString("0000");
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

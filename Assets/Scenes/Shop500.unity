@@ -344,6 +344,7 @@ MonoBehaviour:
   - {fileID: 973232591419026162, guid: 208a8eb317198364da7fce05d1675308, type: 3}
   ResurviveButton: {fileID: 324687893}
   ScoreText: {fileID: 31804614}
+  TitleButton: {fileID: 302701155}
   AccumulatedScore: {fileID: 31804614}
 --- !u!1 &116581593
 GameObject:
