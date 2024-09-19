@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class ShopController : MonoBehaviour
 {
     public Button BuyButton;
+    public Text SeaweedText;
+    private string SeaweedLine = "冷やかしは返りな！！";
     public GameObject SelectCanvas;
     public Button[] Buttons = new Button[8];
     public GameObject[] gameObjects = new GameObject[8];
@@ -44,6 +46,8 @@ public class ShopController : MonoBehaviour
 
     public void OnBuyButtonClicked()
     {
+        if(TitleController.accumulatedScores > 200)
+        {
         TitleController.accumulatedScores -= 200;
         AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
         ResurviveButton.gameObject.SetActive(true);
@@ -51,6 +55,11 @@ public class ShopController : MonoBehaviour
         for(int i = 0; i < Buttons.Length; i++)
         {
             Buttons[i].gameObject.SetActive(true);
+        }
+        }
+        else
+        {
+            SeaweedText.text = SeaweedLine;
         }
     }
     public void OnOneVectorButtonClicked(string buttonOne)
