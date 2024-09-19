@@ -771,7 +771,6 @@ GameObject:
   - component: {fileID: 1743037792}
   - component: {fileID: 1743037791}
   - component: {fileID: 1743037790}
-  - component: {fileID: 1743037793}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -842,19 +841,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743037791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1743037793}
-        m_TargetAssemblyTypeName: ShopStarter, Assembly-CSharp
-        m_MethodName: ShopStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1743037791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,18 +880,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743037788}
   m_CullTransparentMesh: 1
---- !u!114 &1743037793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743037788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726d9eddfbc94754fb5e0cace5a7b23a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1764723311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1657,7 @@ MonoBehaviour:
   SurvivedTimeScore: {fileID: 1414241860}
   AccumulatedScore: {fileID: 752550872}
   SurvivedTimeText: {fileID: 1284849352}
+  ShopButton: {fileID: 1743037790}
 --- !u!4 &2146348169
 Transform:
   m_ObjectHideFlags: 0
