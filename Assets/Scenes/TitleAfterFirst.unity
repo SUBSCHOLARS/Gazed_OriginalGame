@@ -874,7 +874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: -26}
+  m_AnchoredPosition: {x: 260, y: -4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071603905
@@ -898,7 +898,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61b58124145205d4982d613e9da7adf7, type: 3}
+    m_Font: {fileID: 12800000, guid: c0e6ec1ece965cb4e80356c57cfc3861, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -1334,7 +1334,6 @@ GameObject:
   - component: {fileID: 1431026172}
   - component: {fileID: 1431026171}
   - component: {fileID: 1431026174}
-  - component: {fileID: 1431026175}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1359,7 +1358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: -51}
+  m_AnchoredPosition: {x: -275, y: -40}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431026171
@@ -1406,9 +1405,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1431026175}
-        m_TargetAssemblyTypeName: GameStarter, Assembly-CSharp
-        m_MethodName: GameStart
+      - m_Target: {fileID: 1431026174}
+        m_TargetAssemblyTypeName: ExplanationStarter, Assembly-CSharp
+        m_MethodName: ExplanationStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1466,18 +1465,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 531f915be82dcd249ae8ae90a0b4abca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1431026175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431026169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e879cd3d1ce209343a0cea32e0a93561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1440542066
@@ -1538,8 +1525,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61b58124145205d4982d613e9da7adf7, type: 3}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: c0e6ec1ece965cb4e80356c57cfc3861, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1547,8 +1534,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: SURVIVE!
 --- !u!222 &1440542069
@@ -1762,7 +1749,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61b58124145205d4982d613e9da7adf7, type: 3}
+    m_Font: {fileID: 12800000, guid: c0e6ec1ece965cb4e80356c57cfc3861, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0

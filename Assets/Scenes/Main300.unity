@@ -1641,7 +1641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 200}
+  m_AnchoredPosition: {x: 292, y: 200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250442740
@@ -1665,7 +1665,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61b58124145205d4982d613e9da7adf7, type: 3}
+    m_Font: {fileID: 12800000, guid: c0e6ec1ece965cb4e80356c57cfc3861, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -9909,7 +9909,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f227bd1cfb2290a40bd340a8ffd22702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Seaweed: {fileID: 1491023077940411584, guid: 939d5a4438812c444bf60ebd8c8be036, type: 3}
+  gameObjectOne: {fileID: 0}
+  gameObjectTwo: {fileID: 0}
+  gameObjectThree: {fileID: 0}
+  gameObjectFour: {fileID: 0}
+  gameObjectFive: {fileID: 0}
+  gameObjectSix: {fileID: 0}
+  gameObjectSeven: {fileID: 0}
+  gameObjectEight: {fileID: 0}
 --- !u!850595691 &1269068377
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -14480,7 +14487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 170}
+  m_AnchoredPosition: {x: 292, y: 170}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922621580
@@ -14517,7 +14524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61b58124145205d4982d613e9da7adf7, type: 3}
+    m_Font: {fileID: 12800000, guid: c0e6ec1ece965cb4e80356c57cfc3861, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
