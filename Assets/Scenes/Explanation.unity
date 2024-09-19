@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b27da8480edf4428ac0d4aa4a4e23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextButton: {fileID: 0}
+  NextButton: {fileID: 892102750}
   textStory: {fileID: 1585995204}
   DiffPanel: {fileID: 526088028}
 --- !u!1 &1847267429
