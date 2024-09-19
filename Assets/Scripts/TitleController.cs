@@ -14,6 +14,9 @@ public class TitleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        accumulatedScores += accumulatedScore;
+        AccumulatedScore.text = accumulatedScores.ToString("0000");
         //Time.timeScale = 0;
     }
 
@@ -36,9 +39,5 @@ public class TitleController : MonoBehaviour
             LongestSurvivedTime.text = (highScore / 60).ToString("00.0");
             LongestSurvivedTimeMinute.text = (highScore % 60).ToString("00");
         }*/
-
-        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        accumulatedScores += accumulatedScore;
-        AccumulatedScore.text = accumulatedScores.ToString("0000");
     }
 }

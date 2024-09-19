@@ -13,8 +13,7 @@ public class ShopController : MonoBehaviour
     public Button ResurviveButton;
     public Text ScoreText;
     public static int CountSeaweed = 0;
-    public static float accumulatedScores = 0;
-    public static float accumulatedScore;
+    
     public Text AccumulatedScore;
     private Vector3[] VectorArray = {
         new Vector3(-100, 30, 0),
@@ -29,6 +28,10 @@ public class ShopController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float clearScore = PlayerPrefs.GetFloat("ClearSocre", 0f);
+        TitleController.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        TitleController.accumulatedScores += TitleController.accumulatedScore;
+        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
         //BuyButton.onClick.AddListener(OnBuyButtonClicked);
         //ResurviveButton.onClick.AddListener(OnResurviveButtonClicked);
     }
@@ -36,14 +39,13 @@ public class ShopController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        accumulatedScores += accumulatedScore;
-        AccumulatedScore.text = accumulatedScores.ToString("0000");
+
     }
 
     public void OnBuyButtonClicked()
     {
-        accumulatedScores -= 200;
+        TitleController.accumulatedScores -= 200;
+        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
         ResurviveButton.gameObject.SetActive(true);
         SelectCanvas.SetActive(true);
         for(int i = 0; i < Buttons.Length; i++)

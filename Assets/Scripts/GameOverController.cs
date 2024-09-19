@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameOverController : MonoBehaviour
 {
     public Text SurvivedTimeScore;
-    public Text SurivivedTimeTextMinute;
+    public Text AccumulatedScore;
     public Text SurvivedTimeText;
 
     private float survivedScore;
@@ -17,11 +17,13 @@ public class GameOverController : MonoBehaviour
     {
         survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         survivedTime = PlayerPrefs.GetFloat("SurvivedTime", 0f);
-        survivedTimeMinute = PlayerPrefs.GetInt("SurvivedTimeMinute", 0);
 
         SurvivedTimeText.text = SurvivalTimeController.timer.ToString("00.0");
-        SurivivedTimeTextMinute.text = SurvivalTimeMinuteDetector.MinuteDetector.ToString("00");
         SurvivedTimeScore.text = SurvivalTimeController.ScorePotentialTimer.ToString("0000");
+
+        TitleController.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        TitleController.accumulatedScores += survivedScore;
+        AccumulatedScore.text = TitleController.accumulatedScores.ToString("0000");
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
