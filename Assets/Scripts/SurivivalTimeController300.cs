@@ -10,6 +10,7 @@ public class SurivivalTimeController300 : MonoBehaviour
     public static float timer = 300;
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
+    public GameObject AdditionalEnemyGenerator; 
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,10 @@ public class SurivivalTimeController300 : MonoBehaviour
             //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             //SurvivalTimeController.timer = 0;
             Detimer = 0;
+        }
+        if(ScorePotentialTimer == 200)
+        {
+            AdditionalEnemyGenerator.SetActive(true);
         }
     }
 }
