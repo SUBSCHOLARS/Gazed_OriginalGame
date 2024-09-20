@@ -28,6 +28,7 @@ public class SurvivalTimeController : MonoBehaviour
             SceneManager.LoadScene("GameClear");
             PlayerPrefs.SetFloat("SurvivedScore", ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
+            Detimer = 0;
         }
     }
 }

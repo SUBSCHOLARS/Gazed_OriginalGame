@@ -38,7 +38,13 @@ public class OutOfRangeDetector : MonoBehaviour
             PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
             PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
-            SurvivalTimeController.timer = 0;
+            SurvivalTimeController.Detimer = 0;
+            SurivivalTimeController300.Detimer = 0;
+            SurvivalTimeController500.Detimer = 0;
+
+            SurvivalTimeController.timer = 100;
+            SurvivalTimeController.timer = 300;
+            SurvivalTimeController500.timer = 500;
         }
     }
 }
