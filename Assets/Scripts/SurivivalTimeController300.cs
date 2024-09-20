@@ -29,7 +29,7 @@ public class SurivivalTimeController300 : MonoBehaviour
             PlayerPrefs.SetFloat("SurvivedScore", ScorePotentialTimer);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
             //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
-            SurvivalTimeController.timer = 0;
+            //SurvivalTimeController.timer = 0;
         }
     }
 }

@@ -26,6 +26,8 @@ public class SurvivalTimeController : MonoBehaviour
         if(timer <= 0)
         {
             SceneManager.LoadScene("GameClear");
+            PlayerPrefs.SetFloat("SurvivedScore", ScorePotentialTimer);
+            PlayerPrefs.SetFloat("SurvivedTime", timer);
         }
     }
 }

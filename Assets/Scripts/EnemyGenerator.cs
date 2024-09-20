@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    public GameObject[] catPrefabs = new GameObject[6];
+    public GameObject[] catPrefabs = new GameObject[7];
     private Vector3[] VectorArray = new Vector3[10];
     public GameObject funnycatPrefab;
     float timer =0;
@@ -31,7 +31,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(i == 4)
             {
-                VectorArray[i] = new Vector3(Random.Range(-130, 130), 60, Random.Range(-230,30));
+                VectorArray[i] = new Vector3(160.5f, Random.Range(-1, 20), Random.Range(-230,30));
             }
             else if(i == 5)
             {
@@ -84,7 +84,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(randomIndex == 4)
             {
-                spawnCat.transform.Rotate(-90, 0, 0);
+                spawnCat.transform.Rotate(0, 90, 0);
             }
             else if(randomIndex == 5)
             {
@@ -104,7 +104,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else if(randomIndex == 9)
             {
-                return;
+                spawnCat.transform.Rotate(0, 1, 0);
             }
         }
     }
