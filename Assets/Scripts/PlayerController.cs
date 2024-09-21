@@ -41,33 +41,26 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Cat"))
-        {       
+        {
+            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer;       
             string currentSceneName = SceneManager.GetActiveScene().name;   
-            /*SurvivalTimeController.timer += SurvivalTimeController.Detimer;
-            SurivivalTimeController300.timer += SurivivalTimeController300.Detimer;
-            SurvivalTimeController500.timer += SurvivalTimeController500.Detimer;*/
-            /*SurvivalTimeController.Detimer = 0;
-            SurivivalTimeController300.Detimer = 0;
-            SurvivalTimeController500.Detimer = 0;*/
             switch(currentSceneName)
             {
                 case "Main":
-                    SceneManager.LoadScene("GameOver");
-                    PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
                     PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
+                    SceneManager.LoadScene("GameOver");
                     break;
                 case "Main300":
-                    SceneManager.LoadScene("GameOver300");
-                    PlayerPrefs.SetFloat("SurvivedScore", SurivivalTimeController300.ScorePotentialTimer);
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
                     PlayerPrefs.SetFloat("SurvivedTime", SurivivalTimeController300.timer);
+                    SceneManager.LoadScene("GameOver300");
                     break;
                 case "Main500":
-                    SceneManager.LoadScene("GameOver500");
-                    PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController500.ScorePotentialTimer);
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
                     PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController500.timer);
+                    SceneManager.LoadScene("GameOver500");
                     break;
-                default:
-                    return;
             }
             //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
         }

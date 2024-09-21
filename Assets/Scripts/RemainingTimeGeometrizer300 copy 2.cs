@@ -20,23 +20,23 @@ public class RemainingTimeGeometrizer300: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.DOLocalMove(new Vector3(150, 175, 0), 600f);
-        if(SurivivalTimeController300.ScorePotentialTimer >= 10)
+        transform.position += new Vector3(1.33f, 0, 0) * Time.deltaTime;
+        if(SurivivalTimeController300.FishLineChangeDetector >= 10)
         {
             FishLine.gameObject.SetActive(true);
-            if(SurivivalTimeController300.ScorePotentialTimer >= 50)
+            if(SurivivalTimeController300.FishLineChangeDetector >= 50)
             {
                 FishLine2.gameObject.SetActive(true);
                 FishLine.gameObject.SetActive(false);
-                if(SurivivalTimeController300.ScorePotentialTimer >= 100)
+                if(SurivivalTimeController300.FishLineChangeDetector >= 100)
                 {
                     FishLineRealizeFraud.gameObject.SetActive(true);
                     FishLine2.gameObject.SetActive(false);
-                    if(SurivivalTimeController300.ScorePotentialTimer >= 200)
+                    if(SurivivalTimeController300.FishLineChangeDetector >= 200)
                     {
                         FishLinePreparetionRestart.gameObject.SetActive(true);
                         FishLineRealizeFraud.gameObject.SetActive(false);
-                        if(SurivivalTimeController300.ScorePotentialTimer >= 210)
+                        if(SurivivalTimeController300.FishLineChangeDetector >= 210)
                         {
                             FishLineResolutuion.gameObject.SetActive(true);
                             FishLinePreparetionRestart.gameObject.SetActive(false);

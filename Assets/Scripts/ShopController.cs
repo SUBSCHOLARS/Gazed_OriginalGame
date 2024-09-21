@@ -31,12 +31,8 @@ public class ShopController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float clearScore = PlayerPrefs.GetFloat("ClearSocre", 0f);
-        ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        ScoreManager.accumulatedScores += ScoreManager.accumulatedScore;
-        AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
-        //BuyButton.onClick.AddListener(OnBuyButtonClicked);
-        //ResurviveButton.onClick.AddListener(OnResurviveButtonClicked);
+        int shopTokens = PlayerPrefs.GetInt("shoToken", 0);
+        AccumulatedScore.text = shopTokens.ToString("0000");
     }
 
     // Update is called once per frame
@@ -47,16 +43,17 @@ public class ShopController : MonoBehaviour
 
     public void OnBuyButtonClicked()
     {
-        if(ScoreManager.accumulatedScores > 200)
+        int shopTokens = PlayerPrefs.GetInt("shoToken", 0);
+        if(shopTokens > 200)
         {
-        ScoreManager.accumulatedScores -= 200;
-        AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
-        ResurviveButton.gameObject.SetActive(true);
-        SelectCanvas.SetActive(true);
-        for(int i = 0; i < Buttons.Length; i++)
-        {
-            Buttons[i].gameObject.SetActive(true);
-        }
+            shopTokens -= 200;
+            AccumulatedScore.text = shopTokens.ToString("0000");
+            ResurviveButton.gameObject.SetActive(true);
+            SelectCanvas.SetActive(true);
+            for(int i = 0; i < Buttons.Length; i++)
+            {
+                Buttons[i].gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -152,7 +149,6 @@ public class ShopController : MonoBehaviour
     public void OnResurviveButtonClicked()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        //CountSeaweed++;
         switch(currentSceneName)
             {
                 case "Shop":

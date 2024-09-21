@@ -20,31 +20,28 @@ public class OutOfRangeDetector : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer;
             string currentSceneName = SceneManager.GetActiveScene().name;
             switch(currentSceneName)
             {
                 case "Main":
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
                     SceneManager.LoadScene("GameOver");
                     break;
                 case "Main300":
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurivivalTimeController300.timer);
                     SceneManager.LoadScene("GameOver300");
                     break;
                 case "Main500":
+                    PlayerPrefs.SetInt("shopToken", ShopToken);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController500.timer);
                     SceneManager.LoadScene("GameOver500");
                     break;
                 default:
                     return;
             }
-            PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
-            PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
-            PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
-            SurvivalTimeController.Detimer = 0;
-            SurivivalTimeController300.Detimer = 0;
-            SurvivalTimeController500.Detimer = 0;
-
-            SurvivalTimeController.timer = 100;
-            SurvivalTimeController.timer = 300;
-            SurvivalTimeController500.timer = 500;
         }
     }
 }
