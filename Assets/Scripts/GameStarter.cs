@@ -18,6 +18,18 @@ public class GameStarter : MonoBehaviour
     }
     public void GameStart()
     {
-        SceneManager.LoadScene("Main");
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        switch(currentSceneName)
+        {
+            case "GameOver":
+            SceneManager.LoadScene("Main");
+            break;
+            case "GameOver300":
+            SceneManager.LoadScene("Main300");
+            break;
+            case "GameOver500":
+            SceneManager.LoadScene("Main500");
+            break;
+        }
     }
 }

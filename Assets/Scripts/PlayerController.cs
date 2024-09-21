@@ -43,24 +43,28 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Cat"))
         {       
             string currentSceneName = SceneManager.GetActiveScene().name;   
-            PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
-            PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
             /*SurvivalTimeController.timer += SurvivalTimeController.Detimer;
             SurivivalTimeController300.timer += SurivivalTimeController300.Detimer;
             SurvivalTimeController500.timer += SurvivalTimeController500.Detimer;*/
-            SurvivalTimeController.Detimer = 0;
+            /*SurvivalTimeController.Detimer = 0;
             SurivivalTimeController300.Detimer = 0;
-            SurvivalTimeController500.Detimer = 0;
+            SurvivalTimeController500.Detimer = 0;*/
             switch(currentSceneName)
             {
                 case "Main":
                     SceneManager.LoadScene("GameOver");
+                    PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController.ScorePotentialTimer);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController.timer);
                     break;
                 case "Main300":
                     SceneManager.LoadScene("GameOver300");
+                    PlayerPrefs.SetFloat("SurvivedScore", SurivivalTimeController300.ScorePotentialTimer);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurivivalTimeController300.timer);
                     break;
                 case "Main500":
                     SceneManager.LoadScene("GameOver500");
+                    PlayerPrefs.SetFloat("SurvivedScore", SurvivalTimeController500.ScorePotentialTimer);
+                    PlayerPrefs.SetFloat("SurvivedTime", SurvivalTimeController500.timer);
                     break;
                 default:
                     return;

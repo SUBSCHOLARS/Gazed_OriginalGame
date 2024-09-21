@@ -14,8 +14,8 @@ public class TitleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
-        ScoreManager.accumulatedScores += ScoreManager.accumulatedScore;*/
+        ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        //ScoreManager.accumulatedScores += ScoreManager.accumulatedScore;
         AccumulatedScore.text = ScoreManager.accumulatedScores.ToString("0000");
         //Time.timeScale = 0;
     }
@@ -23,12 +23,12 @@ public class TitleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
+        /*survivedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
         float highScore = PlayerPrefs.GetFloat("HighScore", survivedScore);
         if(survivedScore > highScore)
         {
             PlayerPrefs.SetFloat("HighScore", survivedScore);
-        }
+        }*/
 
         /*if(highScore < 60)
         {

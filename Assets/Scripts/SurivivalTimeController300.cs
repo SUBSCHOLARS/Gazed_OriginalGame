@@ -31,9 +31,9 @@ public class SurivivalTimeController300 : MonoBehaviour
             PlayerPrefs.SetFloat("SurvivedTime", timer);
             //PlayerPrefs.SetInt("SurvivedTimeMinute", SurvivalTimeMinuteDetector.MinuteDetector);
             //SurvivalTimeController.timer = 0;
-            Detimer = 0;
+            //Detimer = 0;
         }
-        if(ScorePotentialTimer == 200)
+        if(ScorePotentialTimer >= 200)
         {
             AdditionalEnemyGenerator.SetActive(true);
         }
