@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class TitleController : MonoBehaviour
 {
     public Text AccumulatedScore;
-    private float survivedScore;
     // Start is called before the first frame update
     void Start()
     {

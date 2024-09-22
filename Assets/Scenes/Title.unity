@@ -1878,9 +1878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4966951684e53234b9744a50adaf9138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LongestSurvivedTimeMinute: {fileID: 1731532775}
-  LongestSurvivedTime: {fileID: 1903851088}
   AccumulatedScore: {fileID: 1071603905}
+  Seaweed: {fileID: 1491023077940411584, guid: 939d5a4438812c444bf60ebd8c8be036, type: 3}
 --- !u!4 &2062565440
 Transform:
   m_ObjectHideFlags: 0

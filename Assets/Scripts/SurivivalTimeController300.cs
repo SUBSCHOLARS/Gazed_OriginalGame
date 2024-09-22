@@ -35,7 +35,7 @@ public class SurivivalTimeController300 : MonoBehaviour
             PlayerPrefs.SetFloat("SurvivedTime", timer);
             SceneManager.LoadScene("GameClear");
         }
-       else  if(ScorePotentialTimer >= 200)
+       else if(ScorePotentialTimer >= 200)
         {
             AdditionalEnemyGenerator.SetActive(true);
         }

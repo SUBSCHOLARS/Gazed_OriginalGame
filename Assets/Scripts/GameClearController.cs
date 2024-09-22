@@ -19,7 +19,8 @@ public class GameClearController : MonoBehaviour
             //ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
             //SurvivedTimeScore.text = ((int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer).ToString("0000");
             SurvivedTimeScore.text = shopTokens.ToString("0000");
-            AccumulatedScore.text = SurvivalTimeController.ThisGameScoreShower.ToString("0000");
+            int IntScore = (int)SurvivalTimeController.ThisGameScoreShower;
+            AccumulatedScore.text = IntScore.ToString("0000");
             Debug.Log("累積スコアが代入されました");
             SurvivalTimeController.Detimer = 0;
             SurvivalTimeController.FishLineChangeDetector = 0;
@@ -28,8 +29,9 @@ public class GameClearController : MonoBehaviour
             case "GameClear300":
             //ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
             //SurvivedTimeScore.text = ((int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer).ToString("0000");
+            int IntScore300 = (int)SurivivalTimeController300.ThisGameScoreShower;
             SurvivedTimeScore.text = shopTokens.ToString("0000");
-            AccumulatedScore.text = SurivivalTimeController300.ThisGameScoreShower.ToString("0000");
+            AccumulatedScore.text = IntScore300.ToString("0000");
             Debug.Log("累積スコアが代入されました");
             SurivivalTimeController300.Detimer = 0;
             SurivivalTimeController300.FishLineChangeDetector = 0;
@@ -38,8 +40,9 @@ public class GameClearController : MonoBehaviour
             case "GameClear500":
             //ScoreManager.accumulatedScore = PlayerPrefs.GetFloat("SurvivedScore", 0f);
             //SurvivedTimeScore.text = ((int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer).ToString("0000");
+            int IntScore500 = (int)SurvivalTimeController500.ThisGameScoreShower;
             SurvivedTimeScore.text = shopTokens.ToString("0000");
-            AccumulatedScore.text = SurvivalTimeController500.ThisGameScoreShower.ToString("0000");
+            AccumulatedScore.text = IntScore500.ToString("0000");
             Debug.Log("累積スコアが代入されました");
             SurvivalTimeController500.Detimer = 0;
             SurvivalTimeController500.FishLineChangeDetector = 0;

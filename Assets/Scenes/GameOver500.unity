@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: "\u30EA\u30B9\u30BF\u30FC\u30C8"
 --- !u!222 &192911489
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shop
+  m_Text: "\u30B7\u30E7\u30C3\u30D7"
 --- !u!222 &825432636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1387,7 +1387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Title
+  m_Text: "\u30BF\u30A4\u30C8\u30EB"
 --- !u!222 &2044332012
 CanvasRenderer:
   m_ObjectHideFlags: 0
