@@ -12,7 +12,8 @@ public class SurivivalTimeController300 : MonoBehaviour
     public static float ScorePotentialTimer = 0;
     public static float FishLineChangeDetector = 0;
     public static float ThisGameScoreShower = 0;
-    public GameObject AdditionalEnemyGenerator; 
+    public GameObject AdditionalEnemyGenerator;
+    public GameObject[] gameObjects = new GameObject[8];
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +31,13 @@ public class SurivivalTimeController300 : MonoBehaviour
         SurvivalTimeSecond.text = timer.ToString("000.0");
         if(timer <= 0)
         {
-            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer;
+            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;
             PlayerPrefs.SetInt("shopToken", ShopToken);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
+            for(int i = 0; i < gameObjects.Length; i++)
+            {
+                gameObjects[i].SetActive(false);
+            }
             SceneManager.LoadScene("GameClear");
         }
        else if(ScorePotentialTimer >= 200)

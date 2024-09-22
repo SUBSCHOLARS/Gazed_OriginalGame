@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OutOfRangeDetector : MonoBehaviour
 {
+    public GameObject[] gameObjects = new GameObject[8];
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,13 @@ public class OutOfRangeDetector : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        for(int i = 0; i < gameObjects.Length; i++)
+        {
+            gameObjects[i].SetActive(false);
+        }
         if(other.gameObject.CompareTag("Player"))
         {
-            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer;
+            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;
             string currentSceneName = SceneManager.GetActiveScene().name;
             switch(currentSceneName)
             {

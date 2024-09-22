@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float rotationAngle;
     float VerticalMovingSpeed = 15f;
     float NormalVertical = 5f;
+    public GameObject[] gameObjects = new GameObject[8];
     Rigidbody playerRB;
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,11 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Cat"))
         {
-            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer;       
+            for(int i = 0; i < gameObjects.Length; i++)
+            {
+                gameObjects[i].SetActive(false);
+            }
+            int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;       
             string currentSceneName = SceneManager.GetActiveScene().name;   
             switch(currentSceneName)
             {

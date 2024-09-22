@@ -11,6 +11,7 @@ public class RemainingTimeGeometrizer : MonoBehaviour
     public Text FishLineRealizeFraud;
     public Text FishLinePreparetionRestart;
     public Text FishLineResolutuion;
+    private float FishSpeed = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class RemainingTimeGeometrizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0.8f, 0, 0) * Time.deltaTime;
+        transform.position += new Vector3(1, 0, 0) * FishSpeed * Time.deltaTime;
         if(SurvivalTimeController500.FishLineChangeDetector >= 10)
         {
             FishLine.gameObject.SetActive(true);

@@ -8,14 +8,14 @@ public class SpawnOne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(Seaweed);
         float spawnX = PlayerPrefs.GetFloat("SeaweedXOne", 0);
         float spawnY = PlayerPrefs.GetFloat("SeaweedYOne", 0);
         float spawnZ = PlayerPrefs.GetFloat("SeaweedZOne", 0);
         Vector3 spawnPosition = new Vector3(spawnX, spawnY, spawnZ);
 
         Instantiate(Seaweed, spawnPosition, Quaternion.identity);
-
-        DontDestroyOnLoad(Seaweed);
+        Debug.Log("Spawned!!!!!!");
     }
 
     // Update is called once per frame

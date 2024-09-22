@@ -15,21 +15,12 @@ public class MainSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*gameObjectOne = GameObject.FindGameObjectWithTag("One");
-        gameObjectTwo = GameObject.FindGameObjectWithTag("Two");
-        gameObjectThree = GameObject.FindGameObjectWithTag("Three");
-        gameObjectFour = GameObject.FindGameObjectWithTag("Four");
-        gameObjectFive = GameObject.FindGameObjectWithTag("Five");
-        gameObjectSix = GameObject.FindGameObjectWithTag("Six");
-        gameObjectSeven = GameObject.FindGameObjectWithTag("Seven");
-        gameObjectEight = GameObject.FindGameObjectWithTag("Eight");*/
 
-        string SelectedButton = PlayerPrefs.GetString("Button");
+        string SelectedButton = PlayerPrefs.GetString("Button", "Nothing");
         switch(SelectedButton)
         {
             case "buttonOne":
                 gameObjectOne.SetActive(true);
-                Debug.Log("ActiveOne");
             break;
             case "buttonTwo":
                 gameObjectTwo.SetActive(true);
@@ -51,6 +42,8 @@ public class MainSceneController : MonoBehaviour
             break;
             case "buttonEight":
                 gameObjectEight.SetActive(true);
+            break;
+            case "Nothing":
             break;
         }
 
