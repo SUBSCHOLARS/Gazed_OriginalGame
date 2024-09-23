@@ -5,9 +5,8 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject[] catPrefabs = new GameObject[7];
-    private Vector3[] VectorArray = new Vector3[10];
-    public GameObject funnycatPrefab;
-    float timer =0;
+    private Vector3[] VectorArray = new Vector3[8];
+    public static float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +48,6 @@ public class EnemyGenerator : MonoBehaviour
             {
                 VectorArray[i] = new Vector3(30, Random.Range(-1, 20), Random.Range(-120, -60));
             }
-            else if(i == 9)
-            {
-                VectorArray[i] = new Vector3(0, 0, -100);
-            }
         }
     }
 
@@ -60,7 +55,7 @@ public class EnemyGenerator : MonoBehaviour
     void Update()
     {
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
-        GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length - 1)];
+        GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length)];
         timer += Time.deltaTime;
         if(timer > 2.0f)
         {
@@ -101,10 +96,6 @@ public class EnemyGenerator : MonoBehaviour
             else if(randomIndex == 8)
             {
                 spawnCat.transform.Rotate(0, 90, 0);
-            }
-            else if(randomIndex == 9)
-            {
-                spawnCat.transform.Rotate(0, 1, 0);
             }
         }
     }

@@ -6,9 +6,9 @@ public class PlayerCameraController : MonoBehaviour
 {
     public Transform player;
     public Vector3 offset = new Vector3(0, 5, -10);
-    public float sensitivity = 0.3f;
+    public float sensitivity = 0.0125f;
     public float smoothSpeed = 0.125f;
-    public float verticalRotationLimit = 60f;
+    public float verticalRotationLimit = 30f;
     private float pitch = 0f;
     private float yaw = 0f;
 
