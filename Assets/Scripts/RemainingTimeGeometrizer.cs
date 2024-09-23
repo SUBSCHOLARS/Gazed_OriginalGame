@@ -11,7 +11,7 @@ public class RemainingTimeGeometrizer : MonoBehaviour
     public Text FishLineRealizeFraud;
     public Text FishLinePreparetionRestart;
     public Text FishLineResolutuion;
-    private float FishSpeed = 0.8f;
+    private float FishSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {

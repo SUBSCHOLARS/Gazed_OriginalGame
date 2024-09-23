@@ -7,6 +7,7 @@ public class EnemyGenerator : MonoBehaviour
     public GameObject[] catPrefabs = new GameObject[7];
     private Vector3[] VectorArray = new Vector3[8];
     public static float timer = 0;
+    int LimitedCatPopulation = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +62,7 @@ public class EnemyGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
         GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length)];
 
-        if(catNumber == 0 || catNumber < 4)
+        if(catNumber == 0 || catNumber < LimitedCatPopulation)
         {
             GameObject spawnCat = Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
             if(randomIndex == 0)
@@ -100,6 +101,18 @@ public class EnemyGenerator : MonoBehaviour
             {
                 spawnCat.transform.Rotate(0, 90, 0);
             }
+        }
+        else if(SurivivalTimeController300.ScorePotentialTimer >= 100)
+        {
+            LimitedCatPopulation = 40;
+        }
+        else if(SurvivalTimeController500.ScorePotentialTimer >= 100)
+        {
+            LimitedCatPopulation = 60;
+        }
+        else
+        {
+            //Debug.Log("Some errors happened");
         }
     }
 }

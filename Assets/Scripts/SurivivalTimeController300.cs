@@ -45,7 +45,7 @@ public class SurivivalTimeController300 : MonoBehaviour
         }
        else if(ScorePotentialTimer >= 100)
         {
-            AdditionalEnemyGenerator.SetActive(true);
+            //AdditionalEnemyGenerator.SetActive(true);
             TextTimer += Time.deltaTime;
             Notification.text = NotificationText;
             if(TextTimer >= 3.0f)

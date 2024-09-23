@@ -17,6 +17,10 @@ TagManager:
   - Six
   - Seven
   - Eight
+  - MoveOne
+  - MoveTwo
+  - MoveThree
+  - MoveFour
   layers:
   - Default
   - TransparentFX
