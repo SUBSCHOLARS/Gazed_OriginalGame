@@ -9207,7 +9207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1770152bc7b3c4a8cceecd27718305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionDistance: 100
+  detectionDistance: 75
   Warning: {fileID: 372219264}
 --- !u!1 &1061535074
 GameObject:

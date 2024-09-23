@@ -27,7 +27,7 @@ public class SurivivalTimeController300 : MonoBehaviour
     void Update()
     {
         Detimer += Time.deltaTime;
-        timer = 300 - Detimer;
+        timer = 200 - Detimer;
         ScorePotentialTimer += Time.deltaTime;
         FishLineChangeDetector += Time.deltaTime;
         ThisGameScoreShower += Time.deltaTime;

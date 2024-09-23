@@ -10,6 +10,7 @@ public class EnemyGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         for (int i = 0; i < VectorArray.Length; i++)
         {
             if(i == 0)
@@ -54,12 +55,14 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] catObjects = GameObject.FindGameObjectsWithTag("Cat");
+        int catNumber = catObjects.Length;
+
         int randomIndex = Random.Range(0, VectorArray.Length - 1);
         GameObject randomCat = catPrefabs[Random.Range(0, catPrefabs.Length)];
-        timer += Time.deltaTime;
-        if(timer > 2.0f)
+
+        if(catNumber == 0 || catNumber < 4)
         {
-            timer = 0;
             GameObject spawnCat = Instantiate(randomCat, VectorArray[randomIndex], transform.rotation);
             if(randomIndex == 0)
             {

@@ -5,7 +5,6 @@ public class CheckBehindCamera : MonoBehaviour
 {
     public float detectionDistance = 10f; // 検知する最大距離
     public Text Warning;
-
     void Update()
     {
         // カメラの後ろの方向を計算
