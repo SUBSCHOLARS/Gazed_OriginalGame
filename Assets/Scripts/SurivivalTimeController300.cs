@@ -13,6 +13,9 @@ public class SurivivalTimeController300 : MonoBehaviour
     public static float FishLineChangeDetector = 0;
     public static float ThisGameScoreShower = 0;
     public GameObject AdditionalEnemyGenerator;
+    public Text Notification;
+    string NotificationText = "増援が現れた!!!!";
+    float TextTimer = 0;
     public GameObject[] gameObjects = new GameObject[8];
     // Start is called before the first frame update
     void Start()
@@ -40,9 +43,15 @@ public class SurivivalTimeController300 : MonoBehaviour
             }
             SceneManager.LoadScene("GameClear");
         }
-       else if(ScorePotentialTimer >= 200)
+       else if(ScorePotentialTimer >= 100)
         {
             AdditionalEnemyGenerator.SetActive(true);
+            TextTimer += Time.deltaTime;
+            Notification.text = NotificationText;
+            if(TextTimer >= 3.0f)
+            {
+                Notification.gameObject.SetActive(false);
+            }
         }
     }
 }

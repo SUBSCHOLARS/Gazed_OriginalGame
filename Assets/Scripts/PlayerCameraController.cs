@@ -23,7 +23,7 @@ public class PlayerCameraController : MonoBehaviour
         yaw += Input.GetAxis("Mouse X") * sensitivity;
         pitch -= Input.GetAxis("Mouse Y") * sensitivity;
 
-        pitch = Mathf.Clamp(pitch, -verticalRotationLimit, verticalRotationLimit);
+        pitch = Mathf.Clamp(pitch, -verticalRotationLimit + 20, verticalRotationLimit);
 
         player.rotation = Quaternion.Euler(0, yaw, 0);
 

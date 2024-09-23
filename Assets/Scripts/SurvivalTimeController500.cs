@@ -14,6 +14,9 @@ public class SurvivalTimeController500 : MonoBehaviour
     public static float ThisGameScoreShower = 0;
     public GameObject[] gameObjects = new GameObject[8];
     public GameObject AdditionalEnemyGenerator;
+    float TextTimer = 0;
+    public Text Notification;
+    string NotificationText = "増援がやってきた!!!";
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,16 @@ public class SurvivalTimeController500 : MonoBehaviour
         else if(ScorePotentialTimer >= 200)
         {
             AdditionalEnemyGenerator.SetActive(true);
+            TextTimer += Time.deltaTime;
+            Notification.text = NotificationText;
+            if(TextTimer >= 3.0f)
+            {
+                Notification.gameObject.SetActive(false);
+            }
+        }
+        else if(ScorePotentialTimer >= 250)
+        {
+            
         }
     }
 }
