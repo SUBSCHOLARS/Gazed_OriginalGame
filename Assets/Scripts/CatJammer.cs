@@ -18,7 +18,7 @@ public class CatJammer : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Something collided!");
+        //Debug.Log("Something collided!");
         if(other.gameObject.CompareTag("Cat"))
         {
             Debug.Log("Cat collided!");

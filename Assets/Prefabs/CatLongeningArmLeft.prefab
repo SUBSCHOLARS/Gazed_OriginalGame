@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 1132121760136186887}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 5361087544595964362}
   m_Layer: 0
   m_Name: InnerRightEye (1)
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 2923573875809007951}
   m_Layer: 0
   m_Name: Ear2
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1124
+  m_VersionIndex: 1127
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 7405696349194096850}
   m_Layer: 0
   m_Name: RightEye (1)
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 7708275575065542512}
   m_Layer: 0
   m_Name: Joint2
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 4738904391061832364}
   m_Layer: 0
   m_Name: LeftEye (1)
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 7007786579779477618}
   m_Layer: 0
   m_Name: InnerLeftEye (1)
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2163,7 +2163,7 @@ GameObject:
   - component: {fileID: 1224969345893215638}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2268,7 +2268,7 @@ GameObject:
   - component: {fileID: 4331549796609542962}
   m_Layer: 0
   m_Name: Joint1
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2480,7 +2480,7 @@ GameObject:
   - component: {fileID: 6617569154127361743}
   m_Layer: 0
   m_Name: Ear1
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2850,7 +2850,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1124
+  m_VersionIndex: 1127
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
