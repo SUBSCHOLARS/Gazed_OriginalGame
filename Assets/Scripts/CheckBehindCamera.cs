@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckBehindCamera : MonoBehaviour
 {
     public float detectionDistance = 10f; // 検知する最大距離
+    public Text Warning;
 
     void Update()
     {
@@ -19,7 +21,11 @@ public class CheckBehindCamera : MonoBehaviour
             // ヒットしたオブジェクトが "Cat" タグを持っているか確認
             if (hit.collider.CompareTag("Cat"))
             {
-                Debug.Log("Cat detected behind the camera!");
+                Warning.gameObject.SetActive(true);
+            }
+            else
+            {
+                Warning.gameObject.SetActive(false);
             }
         }
 
