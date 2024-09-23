@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SurvivalTimeController500 : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
-    public static float timer = 500;
+    public static float timer = 400;
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
     public static float FishLineChangeDetector = 0;
@@ -55,7 +55,7 @@ public class SurvivalTimeController500 : MonoBehaviour
         }
         else if(ScorePotentialTimer >= 250)
         {
-            
+
         }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SurivivalTimeController300 : MonoBehaviour
 {
     public Text SurvivalTimeSecond;
-    public static float timer = 300;
+    public static float timer = 200;
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
     public static float FishLineChangeDetector = 0;
