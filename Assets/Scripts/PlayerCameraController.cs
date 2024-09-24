@@ -6,7 +6,7 @@ public class PlayerCameraController : MonoBehaviour
 {
     public Transform player;
     public Vector3 offset = new Vector3(0, 5, -10);
-    public float sensitivity = 6000.0f;
+    public float sensitivity = 3.0f;
     public float smoothSpeed = 1.25f;
     public float verticalRotationLimit = 30f;
     private float pitch = 0f;
@@ -30,8 +30,7 @@ public class PlayerCameraController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 desiredPosition =player.position + rotation * offset;
 
-        Vector3 velocity = Vector3.zero;
-        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
         transform.LookAt(player.position);
     }

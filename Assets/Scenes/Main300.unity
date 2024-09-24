@@ -9192,8 +9192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1830605944}
   offset: {x: 0, y: 5, z: -10}
-  sensitivity: 5
-  smoothSpeed: 0.125
+  sensitivity: 100
+  smoothSpeed: 0.225
   verticalRotationLimit: 80
 --- !u!114 &1043781631
 MonoBehaviour:
