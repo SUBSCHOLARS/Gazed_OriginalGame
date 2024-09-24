@@ -7,7 +7,7 @@ public class EnemyGenerator : MonoBehaviour
     public GameObject[] catPrefabs = new GameObject[7];
     private Vector3[] VectorArray = new Vector3[8];
     public static float timer = 0;
-    int LimitedCatPopulation = 20;
+    int LimitedCatPopulation = 16;
     // Start is called before the first frame update
     void Start()
     {

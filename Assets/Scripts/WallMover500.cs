@@ -21,12 +21,15 @@ public class WallMover500 : MonoBehaviour
             GameObject WallThree = GameObject.FindGameObjectWithTag("MoveThree");
             GameObject WallFour = GameObject.FindGameObjectWithTag("MoveFour");
 
+            WallOne.SetActive(true);
+            WallTwo.SetActive(true);
+            WallThree.SetActive(true);
+            WallFour.SetActive(true);
+
             WallOne.transform.position -= new Vector3(1, 0, 0) * Speed * Time.deltaTime;
             WallTwo.transform.position += new Vector3(1, 0, 0) * Speed * Time.deltaTime;
             WallThree.transform.position += new Vector3(0, 0, 1) * Speed * Time.deltaTime;
             WallFour.transform.position -= new Vector3(0, 0, 1) * Speed * Time.deltaTime;
-
-            Debug.Log("Walls are moving");
         }
     }
 }

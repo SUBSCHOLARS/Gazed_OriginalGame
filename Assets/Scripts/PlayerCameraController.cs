@@ -6,8 +6,8 @@ public class PlayerCameraController : MonoBehaviour
 {
     public Transform player;
     public Vector3 offset = new Vector3(0, 5, -10);
-    public float sensitivity = 0.0125f;
-    public float smoothSpeed = 0.125f;
+    public float sensitivity = 6000.0f;
+    public float smoothSpeed = 1.25f;
     public float verticalRotationLimit = 30f;
     private float pitch = 0f;
     private float yaw = 0f;
@@ -20,8 +20,8 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update()
     {
-        yaw += Input.GetAxis("Mouse X") * sensitivity;
-        pitch -= Input.GetAxis("Mouse Y") * sensitivity;
+        yaw += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        pitch -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         pitch = Mathf.Clamp(pitch, -verticalRotationLimit + 20, verticalRotationLimit);
 
@@ -30,7 +30,8 @@ public class PlayerCameraController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 desiredPosition =player.position + rotation * offset;
 
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        Vector3 velocity = Vector3.zero;
+        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
 
         transform.LookAt(player.position);
     }
