@@ -4296,6 +4296,9 @@ MonoBehaviour:
   FishLineRealizeFraud: {fileID: 874220145}
   FishLinePreparetionRestart: {fileID: 1506239288}
   FishLineResolutuion: {fileID: 787662744}
+  uiElement: {fileID: 784928630}
+  startPosition: {x: -359, y: 175, z: 0}
+  targetPosition: {x: 158, y: 175, z: 0}
 --- !u!114 &784928632
 MonoBehaviour:
   m_ObjectHideFlags: 0
