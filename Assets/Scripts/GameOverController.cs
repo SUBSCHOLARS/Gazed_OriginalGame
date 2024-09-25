@@ -69,7 +69,7 @@ public class GameOverController : MonoBehaviour
     }
     void OnShopButtonClick()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;          
+        string currentSceneName = SceneManager.GetActiveScene().name;  
         switch(currentSceneName)
             {
                 case "GameOver":
@@ -87,7 +87,7 @@ public class GameOverController : MonoBehaviour
     }
     void OnTitleButtonClick()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;          
+        string currentSceneName = SceneManager.GetActiveScene().name;   
         switch(currentSceneName)
             {
                 case "GameOver":

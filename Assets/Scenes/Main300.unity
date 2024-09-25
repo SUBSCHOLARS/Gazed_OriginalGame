@@ -9192,7 +9192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1830605944}
   offset: {x: 0, y: 5, z: -10}
-  sensitivity: 100
+  sensitivity: 90
   smoothSpeed: 0.225
   verticalRotationLimit: 80
 --- !u!114 &1043781631
@@ -9209,6 +9209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionDistance: 75
   Warning: {fileID: 372219264}
+  rayCount: 10
+  angleRange: 60
 --- !u!1 &1061535074
 GameObject:
   m_ObjectHideFlags: 0

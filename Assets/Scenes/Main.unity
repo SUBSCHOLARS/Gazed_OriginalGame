@@ -13703,7 +13703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1830605944}
   offset: {x: 0, y: 5, z: -10}
-  sensitivity: 100
+  sensitivity: 90
   smoothSpeed: 0.225
   verticalRotationLimit: 80
 --- !u!114 &1043781631
@@ -13720,6 +13720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionDistance: 75
   Warning: {fileID: 1060183056}
+  rayCount: 10
+  angleRange: 60
 --- !u!1001 &1053878607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33944,7 +33946,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!1 &1831794870
 GameObject:

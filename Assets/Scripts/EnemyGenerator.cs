@@ -112,7 +112,7 @@ public class EnemyGenerator : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Some errors happened");
+            return;
         }
     }
 }

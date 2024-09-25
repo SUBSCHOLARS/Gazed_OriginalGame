@@ -19,6 +19,8 @@ public class GameStarter : MonoBehaviour
     public void GameStart()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         switch(currentSceneName)
         {
             case "GameOver":
