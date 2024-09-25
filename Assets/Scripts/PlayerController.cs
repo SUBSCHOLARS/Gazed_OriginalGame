@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     float MovingSpeed = 20f;
     private float rotationAngle;
     float VerticalMovingSpeed = 15f;
-    float NormalVertical = 5f;
+    float NormalVertical = 4.5f;
     public GameObject[] gameObjects = new GameObject[8];
     Rigidbody playerRB;
     // Start is called before the first frame update
@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
     }
-
     // Update is called once per frame
     void Update()
     {

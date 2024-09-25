@@ -5,6 +5,10 @@ using UnityEngine;
 public class WallMover500 : MonoBehaviour
 {
     float Speed = 1.0f;
+    public GameObject WallOne;
+    public GameObject WallTwo;
+    public GameObject WallThree;
+    public GameObject WallFour;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +18,8 @@ public class WallMover500 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SurvivalTimeController500.ScorePotentialTimer >= 250)
+        if(SurvivalTimeController500.FishLineChangeDetector >= 250)
         {
-            GameObject WallOne = GameObject.FindGameObjectWithTag("MoveOne");
-            GameObject WallTwo = GameObject.FindGameObjectWithTag("MoveTwo");
-            GameObject WallThree = GameObject.FindGameObjectWithTag("MoveThree");
-            GameObject WallFour = GameObject.FindGameObjectWithTag("MoveFour");
 
             WallOne.SetActive(true);
             WallTwo.SetActive(true);

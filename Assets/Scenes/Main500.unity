@@ -4993,6 +4993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad236d7fc5888cb48bdcb3d43e6b78d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WallOne: {fileID: 1297355130}
+  WallTwo: {fileID: 241979357}
+  WallThree: {fileID: 1810183330}
+  WallFour: {fileID: 1075759149}
 --- !u!1 &865805280
 GameObject:
   m_ObjectHideFlags: 0
@@ -9401,7 +9405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1830605944}
   offset: {x: 0, y: 5, z: -10}
-  sensitivity: 95
+  sensitivity: 85
   smoothSpeed: 0.225
   verticalRotationLimit: 80
 --- !u!114 &1043781631
@@ -15589,8 +15593,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.892344, y: 0.88977623, z: 2}
+  m_Center: {x: -0.14414763, y: -0.079301834, z: 0}
 --- !u!54 &1830605946
 Rigidbody:
   m_ObjectHideFlags: 0

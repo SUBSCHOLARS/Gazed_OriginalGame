@@ -43,7 +43,7 @@ public class SurvivalTimeController500 : MonoBehaviour
             }
             SceneManager.LoadScene("GameClear");
         }
-        else if(ScorePotentialTimer >= 200)
+        else if(FishLineChangeDetector >= 200)
         {
             AdditionalEnemyGenerator.SetActive(true);
             TextTimer += Time.deltaTime;
@@ -53,7 +53,7 @@ public class SurvivalTimeController500 : MonoBehaviour
                 Notification.gameObject.SetActive(false);
             }
         }
-        else if(ScorePotentialTimer >= 250)
+        else if(FishLineChangeDetector >= 250)
         {
 
         }
