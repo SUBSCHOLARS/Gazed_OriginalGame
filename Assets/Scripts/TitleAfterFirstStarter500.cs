@@ -18,6 +18,8 @@ public class TitleAfterFirstStarter500 : MonoBehaviour
     }
     public void TitleAfterFirstStart()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         SceneManager.LoadScene("TitleAfterFirst500");
     }
 }

@@ -18,6 +18,8 @@ public class Main300Starter : MonoBehaviour
     }
     public void Main300Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         SceneManager.LoadScene("Main300");
     }
 }

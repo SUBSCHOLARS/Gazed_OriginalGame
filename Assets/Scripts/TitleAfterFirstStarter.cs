@@ -18,6 +18,8 @@ public class TitleAfterFirstStarter : MonoBehaviour
     }
     public void TitleAfterFirstStart()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         SceneManager.LoadScene("TitleAfterFirst");
     }
 }

@@ -18,6 +18,8 @@ public class ExplanationStarter : MonoBehaviour
     }
     public void ExplanationStart()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         SceneManager.LoadScene("Explanation");
     }
 }

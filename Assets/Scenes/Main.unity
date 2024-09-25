@@ -13718,7 +13718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1770152bc7b3c4a8cceecd27718305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionDistance: 75
+  detectionDistance: 95
   Warning: {fileID: 1060183056}
   rayCount: 10
   angleRange: 60
