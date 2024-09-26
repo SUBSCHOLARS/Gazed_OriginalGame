@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Cat"))
         {
+            WallMover500.WallMoving = 0;
             for(int i = 0; i < gameObjects.Length; i++)
             {
                 gameObjects[i].SetActive(false);

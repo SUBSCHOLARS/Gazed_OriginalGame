@@ -38,8 +38,6 @@ public class ShopController : MonoBehaviour
 
     public void OnBuyButtonClicked()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         int shopTokens = PlayerPrefs.GetInt("shopToken", 0);
         if(shopTokens > 200)
         {
@@ -66,11 +64,11 @@ public class ShopController : MonoBehaviour
             SeaweedText.text = SeaweedLine[Random.Range(0, SeaweedLine.Length - 1)];
             TitleButton.gameObject.SetActive(true);
         }
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnOneVectorButtonClicked(string buttonOne)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosOne = new Vector3(-100, 17.2f, 0);
         PlayerPrefs.SetFloat("SeaweedXOne", spawnPosOne.x);
         PlayerPrefs.SetFloat("SeaweedYOne", spawnPosOne.y);
@@ -80,11 +78,11 @@ public class ShopController : MonoBehaviour
         PlayerPrefs.SetString("Button", "buttonOne");
         Debug.Log("Saved Button");
         //MainSceneController.gameObjectOne.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnTwoVectorButtonClicked(string buttonTwo)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosTwo = new Vector3(0, 17.2f, 0);
         PlayerPrefs.SetFloat("SeaweedXTwo", spawnPosTwo.x);
         PlayerPrefs.SetFloat("SeaweedYTwo", spawnPosTwo.y);
@@ -94,11 +92,11 @@ public class ShopController : MonoBehaviour
         PlayerPrefs.SetString("Button", "buttonTwo");
         Debug.Log("Saved Button");
         //MainSceneController.gameObjectTwo.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnThreeVectorButtonClicked(string buttonThree)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawwnPosThree = new Vector3(100, 17.2f, 0);
         PlayerPrefs.SetFloat("SeaweedXThree", spawwnPosThree.x);
         PlayerPrefs.SetFloat("SeaweedYThree", spawwnPosThree.y);
@@ -106,11 +104,11 @@ public class ShopController : MonoBehaviour
         //gameObjects[2].SetActive(true);
         PlayerPrefs.SetString("Button", "buttonThree");
         //MainSceneController.gameObjectThree.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnFourVectorButtonClicked(string buttonFour)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosFour = new Vector3(100, 17.2f, -100);
         PlayerPrefs.SetFloat("SeaweedXFour", spawnPosFour.x);
         PlayerPrefs.SetFloat("SeaweedYFour", spawnPosFour.y);
@@ -118,11 +116,11 @@ public class ShopController : MonoBehaviour
         //gameObjects[3].SetActive(true);
         PlayerPrefs.SetString("Button", buttonFour);
         //MainSceneController.gameObjectFour.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnFiveVectorButtonClicked(string buttonFive)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosFive = new Vector3(100, 17.2f, -200);
         PlayerPrefs.SetFloat("SeaweedXFive", spawnPosFive.x);
         PlayerPrefs.SetFloat("SeaweedYFive", spawnPosFive.y);
@@ -130,11 +128,11 @@ public class ShopController : MonoBehaviour
         //gameObjects[4].SetActive(true);
         PlayerPrefs.SetString("Button", buttonFive);
         //MainSceneController.gameObjectFive.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnSixVectorButtonClicked(string buttonSix)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosSix = new Vector3(0, 17.2f, -200);
         PlayerPrefs.SetFloat("SeaweedXSix", spawnPosSix.x);
         PlayerPrefs.SetFloat("SeaweedYSix", spawnPosSix.y);
@@ -142,11 +140,11 @@ public class ShopController : MonoBehaviour
         //gameObjects[5].SetActive(true);
         PlayerPrefs.SetString("Button", buttonSix);
         //MainSceneController.gameObjectSix.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnSevenVectorButtonClicked(string buttonSeven)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosSeven = new Vector3(-100, 17.2f, -200);
         PlayerPrefs.SetFloat("SeaweedXSeven", spawnPosSeven.x);
         PlayerPrefs.SetFloat("SeaweedYSeven", spawnPosSeven.y);
@@ -154,11 +152,11 @@ public class ShopController : MonoBehaviour
         //gameObjects[6].SetActive(true);
         PlayerPrefs.SetString("Button", buttonSeven);
         //MainSceneController.gameObjectSeven.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     public void OnEightVectorButtonClicked(string buttonEight)
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         Vector3 spawnPosEight = new Vector3(-100, 17.2f, -100);
         PlayerPrefs.SetFloat("SeaweedXEight", spawnPosEight.x);
         PlayerPrefs.SetFloat("SeaweedYEight", spawnPosEight.y);
@@ -166,12 +164,12 @@ public class ShopController : MonoBehaviour
         //gameObjects[7].SetActive(true);
         PlayerPrefs.SetString("Button", buttonEight);
         //MainSceneController.gameObjectEight.SetActive(true);
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
     public void OnResurviveButtonClicked()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         string currentSceneName = SceneManager.GetActiveScene().name;
         switch(currentSceneName)
             {
@@ -187,5 +185,7 @@ public class ShopController : MonoBehaviour
                 default:
                     return;
             }
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 }

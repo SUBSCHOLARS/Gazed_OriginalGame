@@ -12,6 +12,7 @@ public class SurivivalTimeController300 : MonoBehaviour
     public static float ScorePotentialTimer = 0;
     public static float FishLineChangeDetector = 0;
     public static float ThisGameScoreShower = 0;
+    float EnemyGenerating = 0;
     public GameObject AdditionalEnemyGenerator;
     public Text Notification;
     string NotificationText = "増援が現れた!!!!";
@@ -31,9 +32,12 @@ public class SurivivalTimeController300 : MonoBehaviour
         ScorePotentialTimer += Time.deltaTime;
         FishLineChangeDetector += Time.deltaTime;
         ThisGameScoreShower += Time.deltaTime;
+        EnemyGenerating += Time.deltaTime;
         SurvivalTimeSecond.text = timer.ToString("000.0");
         if(timer <= 0)
         {
+            AdditionalEnemyGenerator.SetActive(false);
+            EnemyGenerating = 0;
             int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;
             PlayerPrefs.SetInt("shopToken", ShopToken);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
@@ -43,7 +47,7 @@ public class SurivivalTimeController300 : MonoBehaviour
             }
             SceneManager.LoadScene("GameClear");
         }
-       else if(ScorePotentialTimer >= 100)
+       else if(EnemyGenerating >= 100)
         {
             //AdditionalEnemyGenerator.SetActive(true);
             TextTimer += Time.deltaTime;

@@ -19,6 +19,7 @@ public class OutOfRangeDetector : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        WallMover500.WallMoving = 0;
         for(int i = 0; i < gameObjects.Length; i++)
         {
             gameObjects[i].SetActive(false);

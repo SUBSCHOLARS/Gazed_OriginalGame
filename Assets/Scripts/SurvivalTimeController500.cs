@@ -11,6 +11,7 @@ public class SurvivalTimeController500 : MonoBehaviour
     public static float Detimer = 0;
     public static float ScorePotentialTimer = 0;
     public static float FishLineChangeDetector = 0;
+    float EnemyGenerating = 0;
     public static float ThisGameScoreShower = 0;
     public GameObject[] gameObjects = new GameObject[8];
     public GameObject AdditionalEnemyGenerator;
@@ -31,9 +32,12 @@ public class SurvivalTimeController500 : MonoBehaviour
         ScorePotentialTimer += Time.deltaTime;
         FishLineChangeDetector += Time.deltaTime;
         ThisGameScoreShower += Time.deltaTime;
+        EnemyGenerating += Time.deltaTime;
         SurvivalTimeSecond.text = timer.ToString("000.0");
         if(timer <= 0)
         {
+            AdditionalEnemyGenerator.SetActive(false);
+            EnemyGenerating = 0;
             int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;
             PlayerPrefs.SetInt("shopToken", ShopToken);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
@@ -43,7 +47,7 @@ public class SurvivalTimeController500 : MonoBehaviour
             }
             SceneManager.LoadScene("GameClear");
         }
-        else if(FishLineChangeDetector >= 200)
+        else if(EnemyGenerating >= 250)
         {
             AdditionalEnemyGenerator.SetActive(true);
             TextTimer += Time.deltaTime;
@@ -52,10 +56,6 @@ public class SurvivalTimeController500 : MonoBehaviour
             {
                 Notification.gameObject.SetActive(false);
             }
-        }
-        else if(FishLineChangeDetector >= 250)
-        {
-
         }
     }
 }

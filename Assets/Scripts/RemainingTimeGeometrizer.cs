@@ -44,7 +44,7 @@ public class RemainingTimeGeometrizer : MonoBehaviour
                         if(SurvivalTimeController500.FishLineChangeDetector >= 250)
                         {
                             FishLineResolutuion.gameObject.SetActive(true);
-                            FishLinePreparetionRestart.gameObject.SetActive(true);
+                            FishLinePreparetionRestart.gameObject.SetActive(false);
                         }
                     }
                 }
