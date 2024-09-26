@@ -37,7 +37,6 @@ public class SurivivalTimeController300 : MonoBehaviour
         if(timer <= 0)
         {
             AdditionalEnemyGenerator.SetActive(false);
-            EnemyGenerating = 0;
             int ShopToken = (int)SurvivalTimeController.ScorePotentialTimer + (int)SurivivalTimeController300.ScorePotentialTimer + (int)SurvivalTimeController500.ScorePotentialTimer + ShopCurrencyHandler.ShopCurrencyYay;
             PlayerPrefs.SetInt("shopToken", ShopToken);
             PlayerPrefs.SetFloat("SurvivedTime", timer);
@@ -45,6 +44,7 @@ public class SurivivalTimeController300 : MonoBehaviour
             {
                 gameObjects[i].SetActive(false);
             }
+            EnemyGenerating = 0;
             SceneManager.LoadScene("GameClear");
         }
        else if(EnemyGenerating >= 100)

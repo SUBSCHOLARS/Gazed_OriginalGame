@@ -11,7 +11,6 @@ public class RemainingTimeGeometrizer300: MonoBehaviour
     public Text FishLineRealizeFraud;
     public Text FishLinePreparetionRestart;
     public Text FishLineResolutuion;
-    private float FishSpeed = 2.59f;
     public RectTransform uiElement;
     public Vector3 startPosition = new Vector3(-359, 175, 0);
     public Vector3 targetPosition = new Vector3(158, 175, 0);
@@ -37,11 +36,11 @@ public class RemainingTimeGeometrizer300: MonoBehaviour
                 {
                     FishLineRealizeFraud.gameObject.SetActive(true);
                     FishLine2.gameObject.SetActive(false);
-                    if(SurivivalTimeController300.FishLineChangeDetector >= 200)
+                    if(SurivivalTimeController300.FishLineChangeDetector >= 150)
                     {
                         FishLinePreparetionRestart.gameObject.SetActive(true);
                         FishLineRealizeFraud.gameObject.SetActive(false);
-                        if(SurivivalTimeController300.FishLineChangeDetector >= 210)
+                        if(SurivivalTimeController300.FishLineChangeDetector >= 170)
                         {
                             FishLineResolutuion.gameObject.SetActive(true);
                             FishLinePreparetionRestart.gameObject.SetActive(false);
